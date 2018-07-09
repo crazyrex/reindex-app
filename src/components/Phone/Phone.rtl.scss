@@ -1,0 +1,94 @@
+@import "../../assets/css/variables";
+.phone-container {
+    width: 168px;
+}
+.show-phone-btn {
+  background-color: transparent !important;
+  border: solid 1px !important;
+  border-radius: 30px !important;
+  color: $gray !important;
+  font-family: 'Heebo-Light' !important;
+  height: 32px !important;
+  line-height: 32px !important;
+}
+.popoverVirtual {
+    width: 193px;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: 300;
+    color: #818181;
+    border: solid 1px #e1e1e1;
+    a {
+      color:#818181; 
+    }
+}
+.dialog-phone {
+  direction: rtl !important;
+  text-align: right;
+  border: none !important;
+  padding: 0 !important;
+  
+  div:first-child { 
+    border-radius: 5px !important;
+}
+  .title {
+    padding: 0px !important;
+    border: none !important;
+    width: 38px !important;
+    height: 38px !important;
+    svg {
+      width: 19px !important;
+      height: 19px !important;
+    }
+  }
+ .number {
+      font-size: 22px;
+    font-weight: bold;
+    line-height: 2.5;
+    text-align: center;
+    color: $black;
+}
+.text {
+         font-size: 12px;
+    padding: 5px 17px 34px;
+    font-weight: 300;
+    line-height: 1.17;
+    text-align: center;
+    color: $gray;
+    border-bottom: 1px solid $gray-light;
+    a {
+      color: $gray;
+    }
+}
+.wrapper-in-dialog {
+    text-decoration: none;
+    color: $black;
+    display: block;
+    width: 230px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fad700;
+    margin: 15px auto 15px;
+    text-align: center;
+    padding: 8px;
+    button {
+       vertical-align: top !important;
+       height: 43px !important;
+       width: 30px !important;
+       padding: 8px 0px !important;
+    }
+    div {
+       display: inline-block;
+       vertical-align: bottom;
+       height: 36px;
+       margin-left: 4px;
+     }
+     .icon-phone {
+       svg {
+          margin-top: -8px;
+       }
+     }
+}
+}
+
+

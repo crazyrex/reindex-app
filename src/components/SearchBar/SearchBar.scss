@@ -1,0 +1,322 @@
+@import "../../assets/css/variables";
+.search-bar {
+    display: flex;
+    width: 100%;
+    border-radius: 27px;
+    border:  solid 1px;
+    .full-width{
+        width: 100%;
+    }
+    & > div {
+        border-radius: 27px;
+        background-color: white;
+        height: 62px;
+        &.select.active {
+            width: 20%;
+            border-left: 1px solid #dbdbdb;
+            border-top-right-radius: 31px;
+            border-bottom-right-radius: 31px;
+            display: flex;
+            justify-content: center;
+            .selectBtn {
+                @media screen and (min-width: 767px) {
+                    font-size: 22px;
+                }
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-around;
+                & > div {
+                    width: 20px;
+                    height: 9px;
+                }
+            }
+            .selectList {
+                display: none;
+                position: absolute;
+                margin-top: 70px;
+                background-color: white;
+                border-radius: 10px;
+                width: 20%;
+                padding-right: 0;
+                z-index: 1;
+                @media screen and (max-width: 767px) {
+                    width: 35%;
+                }
+                &.active {
+                    display: block;
+                }
+                & > li {
+                    list-style: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    transition: 300ms;
+                }
+                & > li:hover {
+                    background: black;
+                    color: white;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -7%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 0;
+                    height: 0;
+                    border-bottom: solid 8px white;
+                    border-left: solid 8px transparent;
+                    border-right: solid 8px transparent;
+                }
+            }
+            select {
+                font-family: 'Heebo';
+                font-size: 22px;
+                width: 100%;
+                padding: 0px 20px;
+                color: #3d3d3d;
+                -moz-appearance:none; /* Firefox */
+                -webkit-appearance:none;
+                background-position: 100%;
+                background-position-x: 7%;
+            }
+            select:focus {
+                outline: none !important;
+                padding: 2px 12px;
+                border-radius: 20px;
+            }
+        }
+        &:last-child {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .searchIcon {
+                border-radius: 50% !important;
+                padding: 5px !important;
+            }
+        }
+    }
+    .autoComplete {
+        font-size: 22px !important;
+        hr {
+            display: none !important;
+        }
+    }
+    .search-icon-wrapper {
+        a {
+            background: black;
+            background: none;
+            border-radius: 23px;
+            height: 46px;
+            width: 46px;
+            position: relative;
+            display: block;
+            cursor: pointer;
+            background: black;
+            transition: 200ms;
+            -webkit-appearance: none;
+            &:hover {
+                transform: scale3d(0.8, 0.8, 0.8);
+                &::before {
+                    opacity: 1;
+                    transform: scale3d(1.5, 1.5, 1.5);
+                }
+                i svg{
+                    width: 100% !important;
+                    height: 100% !important;
+                    right: 0;
+                    padding-top: 0;
+                    color: black !important;          
+                }
+            }
+            &:focus {
+                outline: -webkit-focus-ring-color auto 5px;
+            }
+            &::before {
+                content: " ";
+                transition: 300ms;
+                position: absolute;
+                display: block;
+                top: 0;
+                border-radius: inherit;
+                right: 0;
+                background: $yellow;
+                width: 100%;
+                opacity: 0;
+                transform: scale3d(0, 0, 0);
+                height: 100%;
+            }
+            i svg{
+                position: absolute;
+                top: 0;
+                right: 1px;
+                padding-top: 9px;
+                width: 85% !important;
+                height: 85% !important;
+                display: block !important;
+                text-align: center;
+                transition: 300ms !important;
+                color: white !important;          
+            }
+        }
+    }
+}
+.slider-categories {
+    margin: 0 -21px;
+    padding: 0;
+    background: white;
+    height: 20px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    span {
+        margin-right: 12px;
+    }
+}
+.wrapper-tabs {
+    margin-top: 74px;  
+}
+
+.main-search.search .search-bar {
+    & > div {
+        height: 32px;
+        &.select.active {
+            // display: none;
+            select {
+                font-size: 17px;
+            }
+        }
+        &:last-child {
+            .search-icon-wrapper a {
+                display: none;
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+    .autocomplete {
+        font-size: 17px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .search-bar .autocomplete {
+            width: 100% !important;
+    }
+    .main-search .search-bar {
+        & > div {
+            height: 52px;
+            &.select.active {
+                // display: none;
+                select {
+                    font-size: 17px;
+                }
+            }
+            &:last-child {
+                // border-top-right-radius: 31px;
+                // border-bottom-right-radius: 31px;
+                // width: 100%;
+                .searchIcon {
+                    width: 38px !important;
+                    height: 38px !important;
+                    padding: 0px !important;
+                }
+            }
+        }
+        .autocomplete {
+            font-size: 17px !important;
+        }
+    }
+    .main-search .search-bar > div {
+        &.select.active{
+            width: 35%;
+        }
+        &:last-child{
+            width: 100%;
+        }
+    }
+    .search-bar > div:last-child > div:first-child {
+        width: 100%;
+        & > div {
+            width: 100% !important;
+        }
+    }
+    .tabs {
+        width: 100%;
+        .tab-content {
+            flex-wrap: wrap;
+        }
+    }
+}
+.main-search.main {
+    @media screen and (min-width: 767px){
+    .search-bar.tabs-state {
+        flex-direction: column;
+        & > div.select.active {
+            width: 100%;
+            background-color: transparent;
+            justify-content: flex-start;
+            border-left: none;
+            .tab {
+                width: 185px;
+                height: 32px;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Heebo-Bold';
+                &.active {
+                    background-color: black;
+                    color: $yellow;
+                }
+            }
+        }
+        & > div:last-child {
+            width: 100%;
+            padding-right: 20px;
+            border-radius: 31px;
+        }
+    }
+}
+}
+.search-bar.tabs-state {
+    & > div.select.active {
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 30%;
+        align-items: center;
+        @media screen and (max-width: 767px){
+            width: 40%;
+        }
+        .tab {
+            width: 185px;
+            height: 36px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo-Bold';
+            cursor: pointer;
+            &.active {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+    & > div:last-child {
+        width: 70%;
+        @media screen and (max-width: 767px){
+            width: 60%;
+        }
+    }
+}
+.search-bar .select {
+    display: none;
+    &.active {
+        display: flex;
+    }
+}

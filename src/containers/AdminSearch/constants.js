@@ -1,0 +1,13 @@
+export const RESULTS_SUCCESS = 'boilerplate/AdminSearch/RESULTS_SUCCESS';
+export const LOAD_RESULTS = 'boilerplate/AdminSearch/LOAD_RESULTS';
+export const SET_SELECTED_ROWS = 'boilerplate/AdminSearch/SET_SELECTED_ROWS';
+export const LOAD_CATEGORIES_TREE = 'boilerplate/AdminSearch/LOAD_CATEGORIES_TREE';
+export const CATEGORIES_TREE_SUCCESS = 'boilerplate/AdminSearch/CATEGORIES_TREE_SUCCESS';
+export const CHANGE_TREE = 'boilerplate/AdminSearch/CHANGE_TREE';
+export const RELATE_TO_CATEGORY = 'boilerplate/AdminSearch/RELATE_TO_CATEGORY';
+export const RELATION_SUCCESS = 'boilerplate/AdminSearch/RELATION_SUCCESS';
+export const CLOSE_CONNECT_2_CATEGORY_ALERT = 'boilerplate/AdminSearch/CLOSE_CONNECT_2_CATEGORY_ALERT';
+export const LOAD_SCORE_DATA = 'boilerplate/AdminSearch/LOAD_SCORE_DATA';
+export const SCORE_DATA_SUCCESS = 'boilerplate/AdminSearch/SCORE_DATA_SUCCESS';
+export const UPDATE_RECORD  = 'boilerplate/AdminSearch/UPDATE_RECORD';
+export const UPDATE_RECORD_SUCCESS = 'boilerplate/AdminSearch/UPDATE_RECORD_SUCCESS';

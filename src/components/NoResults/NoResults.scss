@@ -1,0 +1,109 @@
+@import "../../assets/css/variables";
+.wrapper-no-results {
+  width: 100%;
+  height: 100%;
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .abroch {
+      margin: 0 auto;
+      width: 165px;
+      height: 290px;
+    }
+    .text {
+      margin: 0 auto;
+      font-family: 'Heebo-Light';
+      font-size: 22px;
+      line-height: 1.36;
+      text-align: center;
+      color: #3d3d3d;
+      max-width: 444px;
+    }
+  }
+  .bottom {
+    position: absolute;
+    bottom: 62px;
+    right: 0;
+    left: 0;
+    background-color: $light-gray;
+    .formHeader {
+      font-family: 'Heebo-Bold';
+      font-size: 21px;
+      text-align: center;
+      svg {
+        height: 30px !important;
+        width: 30px !important;
+      }
+      & > div {
+        margin-top: -10px;
+      }
+    }
+    .formContent {
+      max-height: 0;
+      transition: max-height 0.15s ease-out;
+      overflow: hidden;
+      &.active {
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+      }
+      form {
+        flex-direction: column;
+        padding: 10px 0 26px 0 !important;
+        .wrapper-input {
+          max-width: none !important;
+          width: 100% !important;
+          margin-bottom: 17px !important;
+          input {
+            color: rgba(27, 27, 27, 0.8) !important;
+          }
+          & > div:last-child {
+            margin-top: 5px !important;
+          }
+        }
+        .send-btn {
+          display: none !important;
+          &.no-icon {
+            display: block !important;
+            background: $yellow !important;
+            border-radius: 21px !important;
+            height: 42px !important;
+            span {
+              font-size: 17px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper-no-results {
+    .center {
+      width: 90%;
+      top: 45%;
+      .abroch {
+        background-size: 65%;
+        background-position: bottom;
+      }
+      .text {
+        font-size: 17px;
+        max-width: 300px;
+        line-height: 23px;
+      }
+    }
+    .wrapper-createBtn{ 
+      bottom: -43px;
+      .create-btn {
+        border-radius: 50%;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

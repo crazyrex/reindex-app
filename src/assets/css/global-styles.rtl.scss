@@ -1,0 +1,527 @@
+
+@import "~sanitize.css";
+@import "./variables"; 
+ 
+
+/*-----------------------------------------------
+                    font-faces
+-----------------------------------------------*/
+ 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/heebo/ttf/Heebo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heebo-Bold';
+    src: url('../fonts/heebo/ttf/Heebo-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heebo-Light';
+    src: url('../fonts/heebo/ttf/Heebo-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+}
+ 
+
+/*-----------------------------------------------
+                    General
+-----------------------------------------------*/
+
+body {
+  font-size: 16px;
+  font-family: Heebo !important;
+}
+
+#app {
+  background-color: white;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#content {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    width: 100%;
+  }
+}
+
+.tabs-title {
+  background: black !important;
+}
+
+/*-----------------------------------------------
+                    Titles
+-----------------------------------------------*/
+
+.page-title {
+  font-size: $large;
+  font-weight: normal;
+  margin: 0 0 0 0.25em;
+  line-height: 1;
+  color: $black;
+} 
+
+.page-dest {
+  font-weight: normal;
+  line-height: 1;
+  margin: 0.3em 0 1.4em 0.55em;
+  font-size: $normal;
+  color: $black;
+}
+
+/*-----------------------------------------------
+                section-top-content
+-----------------------------------------------*/
+
+.section-top-content { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*-----------------------------------------------
+                    White-Box
+-----------------------------------------------*/
+
+.box {
+  box-shadow: 0px 3px 5px -3px rgba(0, 0, 0, 0.49);
+  background-color: white;
+  border: 1px solid $border-color;
+}
+
+.box-side-first,
+.box-side-second {
+  display: flex;
+  align-items: center;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45em 0.8em 0.5em 0.8em;
+  border-bottom: 1px solid $border-color;
+}
+
+.box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7em 0.8em;
+  border-top: 1px solid $border-color;
+}
+
+
+/*-----------------------------------------------
+                    Buttons
+-----------------------------------------------*/
+
+.muni-btn {
+  min-width: 70px !important;
+  color: $black !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  * {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: 600 !important;
+    color: inherit !important; 
+  }
+
+  &:disabled {
+    opacity: .3;
+  }
+  &:not([disabled]):hover, &.active {
+    color: $green !important;
+  }
+} 
+
+.muni-icon-btn {
+  &:disabled {
+    opacity: .3;
+  }
+  .mdi:before {
+    color: $black;
+  }
+
+  &:not([disabled]):hover span,
+  &:not([disabled]):hover .mdi:before {
+   color: $green !important; 
+  }
+  > div > div {
+     display:none;
+  }
+
+}
+
+.muni-text-field {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  * {
+    font-size: inherit !important;
+    font-family: inherit !important;   
+  }
+  > div, input:not(:focus):not(:empty) {
+    color: $gray !important;
+  }
+  input:focus {
+    color: $green !important;
+  }
+}
+
+
+.muni-select-text {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  color: $black;
+  * {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+  }
+}
+
+
+.muni-autocomplete {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  input ~ div {
+    display:none;
+  }
+  input {
+    color: $black !important;
+    &:not(:focus):not(:empty) {
+      color: $gray !important;
+    }
+    &:focus {
+      color: $green !important;
+    }
+    &:disabled {
+      color: $black !important;
+    }
+  }
+}
+
+.muni-text-field-underline {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  vertical-align: top;
+  max-width: 100%;
+  label , input {
+    font-size: inherit !important;
+    font-family: inherit !important;
+  }
+  label {
+    color: $black !important;
+  }
+  input {
+    &:not(:focus):not(:empty) {
+      color: $gray !important;
+    }
+    &:focus {
+      color: $green !important;
+    }
+    &:disabled {
+      color: $black !important;
+    }
+  }
+}
+
+.muni-checkbox {
+  display: inline-block !important;
+  input + div > div {
+    height: 33px !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+/*-----------------------------------------------
+                  .rc-collapse
+-----------------------------------------------*/
+
+div.rc-collapse {
+  background-color: transparent;
+  border: 0;
+  
+  > .rc-collapse-item {
+    border-bottom: 1px solid $border-color;
+    border-top: 0;
+    > .rc-collapse-header {
+      color: $black;
+      font-weight: 600;
+      padding: 1.7em 1.5em 1.7em 1.2em;
+      height: auto;
+      text-indent: 0;
+      line-height: 1;
+      .arrow {
+        float: right;
+        margin-right: 0;
+        margin-top: 0;
+        width: auto;
+        height: auto;
+        font-size: 1.4em;
+        line-height: 0.6;
+        font-style: normal;
+        border: 0;
+        margin: 0;
+        font-weight: normal;
+        &:before {
+          content: "\E313";
+          font-family: 'Material Icons';
+        }
+      }
+    }
+    
+    &.rc-collapse-item-active > .rc-collapse-header .arrow:before {
+      content: "\E316";
+    }
+  }
+
+  .rc-collapse-content {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .rc-collapse-content-box {
+    margin: 0;
+  }
+
+}
+
+
+/*-----------------------------------------------
+                  .vertical-tabs
+-----------------------------------------------*/
+
+.vertical-tabs {
+  display: flex;
+
+  > div {
+    flex-grow: 1;
+  
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+button.vertical-tab {
+  width: 100% !important;
+  border-bottom: 1px solid $border-color !important;
+  border-right: 1px solid $border-color !important;
+  background-color: #fafafa !important;
+  text-align: left;
+  box-sizing: border-box !important;
+  padding: 0.8em 1.2em !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  color: inherit !important;
+  height: auto !important;
+  * {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    height: auto !important;
+  }
+  div {
+    display: inline-block;
+  }
+}
+
+.vertical-tabs-content {
+   >div {
+     height:100%
+   }
+ .vertical-content-tab {
+    display: flex;
+  }
+}
+
+
+
+/*-----------------------------------------------
+                  full-height
+-----------------------------------------------*/
+
+
+.full-height-container {
+  display: flex;
+  flex-direction: column;
+  > .full-height-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/*-----------------------------------------------
+                  full-width
+-----------------------------------------------*/
+
+
+.full-width {
+  width: 100%;
+}
+
+
+/*-----------------------------------------------
+                  items
+-----------------------------------------------*/
+
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  background-color: rgba(249, 249, 249, 0.5);
+  li {
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+    &.active {
+      color: blue;
+    }
+  }
+}
+
+.wrapper-auto-complete {
+  input {
+    &+div {
+      hr:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+@import "../../assets/css/variables";
+.wrapper-no-results {
+  width: 100%;
+  height: 100%;
+  .center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -ms-transform: translateX(50%) translateY(-50%);
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    .abroch {
+      margin: 0 auto;
+      width: 165px;
+      height: 290px;
+    }
+    .text {
+      font-family: 'Heebo-Light';
+      font-size: 22px;
+      line-height: 1.36;
+      text-align: center;
+      color: #3d3d3d;
+      max-width: 444px;
+    }
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-gray;
+    .formHeader {
+      font-family: 'Heebo-Bold';
+      font-size: 21px;
+      text-align: center;
+      svg {
+        height: 30px !important;
+        width: 30px !important;
+      }
+      & > div {
+        margin-top: -10px;
+      }
+    }
+    .formContent {
+      max-height: 0;
+      transition: max-height 0.15s ease-out;
+      overflow: hidden;
+      &.active {
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+      }
+      form {
+        flex-direction: column;
+        padding: 10px 0 26px 0 !important;
+        .wrapper-input {
+          max-width: none !important;
+          width: 100% !important;
+          margin-bottom: 17px !important;
+          input {
+            color: rgba(27, 27, 27, 0.8) !important;
+          }
+          & > div:last-child {
+            margin-top: 5px !important;
+          }
+        }
+        .send-btn {
+          display: none !important;
+          &.no-icon {
+            display: block !important;
+            background-color: $yellow !important;
+            border-radius: 21px !important;
+            height: 42px !important;
+            span {
+                  font-size: 17px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper-no-results {
+    .center {
+      width: 65%;
+      top: 45%;
+      .abroch {
+        background-size: 65%;
+        background-position: bottom;
+      }
+      .text {
+        font-size: 17px;
+        max-width: 300px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+

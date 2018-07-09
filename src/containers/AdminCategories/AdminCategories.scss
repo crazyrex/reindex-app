@@ -1,0 +1,43 @@
+.admin-categories {
+  .wrap-upload {
+    margin-top: 36px;
+  }
+  .wrapper-tree {
+      height: 800px;
+    .rst__tree {
+      .rst__node {
+        &:first-child {
+          display: block !important;
+          .rst__moveHandle {
+            display: none;
+          }
+        }
+        .rst__nodeContent {
+          .rst__rowWrapper {
+            .rst__row {
+              .rst__moveHandle {
+                width: 15px;
+                height: 15px;
+              }
+              .rst__rowContents {
+                padding-right: 50px;
+                .rst__rowToolbar {
+                  top: 0;
+                  right: 0;
+                  .add,
+                  .del {
+                    cursor: pointer;
+                    display: block !important;
+                    svg {
+                        height: 17px !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

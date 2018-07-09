@@ -1,0 +1,22 @@
+@import "../../assets/css/variables";
+.thanks-page {
+  background-color: $yellow;
+  .wrapper-img {
+    height: 100%;
+    .img-desk,
+    .img-mob {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing-page {
+    .wrapper-img {
+      // margin-top: 40px;
+    }
+  }
+}

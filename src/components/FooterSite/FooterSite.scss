@@ -1,0 +1,16 @@
+
+@import "../../assets/css/variables";
+
+
+/*-----------------------------------------------
+                 footer-site
+-----------------------------------------------*/
+
+.footer-site {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em 2.5em 0.7em 2.5em;
+  color: $gray;
+  font-size: $small;
+  border-bottom: 4px solid #a4a4a4;
+}

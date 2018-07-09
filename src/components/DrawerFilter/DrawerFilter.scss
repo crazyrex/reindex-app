@@ -1,0 +1,82 @@
+@import "../../assets/css/variables";
+.drawer-filter {
+  position: fixed;
+  top: 9px;
+  right: 11px;
+  z-index: 999;
+  &.active {
+    right: 20px;
+  }
+  .overlay,
+  .container {
+    top: 116px !important;
+  }
+  .container {
+    padding: 12px;
+  }
+  .filters-list {
+    max-height: 150px;
+    overflow: auto;
+  }
+  .wrapper-filterBtn.open {
+    border-radius: 63%;
+    width: 62px;
+    padding: 0;
+    height: 62px;
+  }
+  .wrapper-filterBtn {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 32%;
+    width: 62px;
+    height: 39px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    button { 
+        display: none !important;
+        height: 30px !important;
+        padding: 5px !important;
+    }
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+      color: white !important;
+    }
+    span:last-child {
+      color: black;
+    }
+  }
+  &.active {
+    .wrapper-filterBtn {
+      background-color: $yellow;
+      z-index: 9999 !important;
+      position: fixed;
+      bottom: 20px;
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        color: black !important;
+      }
+      span:last-child {
+        color: black;
+      }
+    }
+  }
+}
+
+.main-search.main .drawer-filter {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .main-search .drawer-filter {
+    display: none;
+  }
+}

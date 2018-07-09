@@ -1,0 +1,13 @@
+export const LOAD_FILTER_DATA = 'boilerplate/SearchBar/LOAD_FILTER_DATA'; // AUTOCOMPLETE SEARCH
+export const LOAD_FILTER_DATA_SUCCESS = 'boilerplate/SearchBar/LOAD_FILTER_DATA_SUCCESS';
+export const LOAD_CATEGORIES_FILTER_DATA = 'boilerplate/SearchBar/LOAD_ALL_FILTER_DATA'; // CATGEGORIES DATA
+export const LOAD_CATEGORIES_FILTER_DATA_SUCCESS = 'boilerplate/SearchBar/LOAD_ALL_FILTER_DATA_SUCCESS';
+export const LOAD_SUBCATEGORIES = 'boilerplate/SearchBar/LOAD_SUBCATEGORIES';
+export const LOAD_SUBCATEGORIES_SUCCESS = 'boilerplate/SearchBar/LOAD_SUBCATEGORIES_SUCCESS';
+export const SET_ACTIVE_TAB = 'boilerplate/SearchBar/SET_ACTIVE_TAB';
+export const UPDATE_SEARCH_OBJ = 'boilerplate/SearchBar/UPDATE_SEARCH_OBJ';
+export const REDUCE_FILTERS = 'boilerplate/SearchBar/REDUCE_FILTERS';
+export const EMPTY_SUBCATEGORIES = 'boilerplate/SearchBar/EMPTY_SUBCATEGORIES';
+export const LOAD_HIERARCHY_FILTER_DATA = 'boilerplate/SearchBar/LOAD_HIERARCHY_FILTER_DATA';
+export const LOAD_HIERARCHY_FILTER_DATA_SUCCESS = 'boilerplate/SearchBar/LOAD_HIERARCHY_FILTER_DATA_SUCCESS';
+export const INIT_SEARCH = 'boilerplate/SearchBar/INIT_SEARCH';

@@ -1,0 +1,64 @@
+.thank-page {
+    background: #ffd800;
+    .shcoach {
+      width: 33vw;
+			height: 9vw;
+			margin: 5vw auto 0;
+			background-size: 100%;
+    }
+		.hand {
+			width: 8vw;
+			height: 15vw;
+			margin: 0 auto;
+			background-size: 94%;
+		}
+		.thank {
+			width: 32vw;
+			height: 7vw;
+			margin: 0 auto 3vw;
+			background-size: 100%;
+		}
+		.thankTxt {
+			width: 32vw;
+			height: 5vw;
+			margin: 1vw auto;
+			background-size: 100%;
+		}
+		.search-bar {
+			width: 56vw;
+			margin: 0 auto;
+		}
+		.search-bar>div {
+    	height: 55px;
+		}
+    
+}
+
+@media screen and (max-width: 767px) {
+  .thank-page {
+    .shcoach {
+         width: 83%;
+    height: 22vw;
+    margin: 28vw auto 0;
+    }
+		.hand {
+			    width: 22%;
+    height: 39vw;
+		    margin: 5vw auto;
+		}
+		.thank {
+			    width: 80%;
+    height: 21vw;
+		    margin: 7vw auto 10vw;
+		}
+		.search-bar {
+    width: 95%;
+    margin: 0 auto;
+}
+.thankTxt {
+    width: 84%;
+    height: 62px;
+}
+    
+}
+}

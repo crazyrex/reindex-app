@@ -1,0 +1,44 @@
+.admin-search {
+  .wrapper-autocomplete {
+    text-align: center;
+    width: 50%;
+    max-width: 800px;
+    border: solid 1px;
+    border-radius: 40px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+  .wrapper-filters {
+    width: 20%;
+  }
+  .wrapper-selected-results-actions {
+    div {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+  .wrapper-tags {
+    max-height: 96px;
+    overflow: hidden;
+  }
+  .wrapper-results {
+    .table {
+      tr td {
+        padding: 4px 0px 4px 16px;
+      }
+      tr td span {
+        text-align: right;
+        min-width: 100px !important;
+      }
+    }
+  }
+ }
+
+.connect-2-category-dialog {
+  .categories-tree-component {
+    .rst__rowToolbar {
+      left: 0;
+      cursor: pointer;
+    }
+  }
+}

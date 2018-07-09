@@ -1,0 +1,94 @@
+@import "../../assets/css/variables";
+.loc {
+  text-align: right;
+  display: inline-block;
+  position: fixed;
+  left: 14px;
+  top: 188px;
+  z-index: 99;
+    button {
+      border: 1px solid !important;
+      border-radius: 24px !important;
+      height: 38px !important;
+      background: white !important;
+    }
+  }
+.location-change {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+  &.active {
+    left: 20px;
+  }
+  .overlay,
+  .container {
+    top: 116px !important;
+  }
+  .container {
+    padding: 12px;
+  }
+  .filters-list {
+    max-height: 150px;
+    overflow: auto;
+  }
+  .wrapper-location {
+   
+    .title {
+    font-family: 'Heebo-Bold';
+    font-size: 21px;
+    white-space: normal;
+
+    }
+    .change {
+      margin: 8px -3px;
+      label {
+        margin-left: 10px;
+      }
+    }
+ 
+  }
+  .submitBtn {
+    box-shadow: none!important;
+    min-width: 180px!important;
+    background-color: transparent!important;
+    position: absolute;
+    bottom: 131px;
+    left: 0;
+    right: 0;
+    width: 20%;
+    margin: 0 auto;
+    button {
+      background: white !important;
+      border-radius: 21px!important;
+      background-color: #ffd800!important;
+      height: 42px!important;
+    }
+  }
+  &.active {
+    .wrapper-filterBtn {
+      background-color: $yellow;
+      z-index: 9999 !important;
+      position: fixed;
+      bottom: 20px;
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        color: black !important;
+      }
+      span:last-child {
+        color: black;
+      }
+    }
+  }
+}
+
+.main-search.main .drawer-filter {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .main-search .drawer-filter {
+    display: none;
+  }
+}

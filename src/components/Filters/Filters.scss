@@ -1,0 +1,51 @@
+@import "../../assets/css/variables";
+.select-field {
+  margin-bottom: 15px;
+}
+
+.filters-header {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  direction: rtl;
+  svg {
+    color: $gray !important;
+  }
+  >span {
+    display: inline-flex;
+    align-items: center;
+  }
+  &>span:last-child {
+    &>span:last-child {
+      display: none;
+    }
+  }
+  button {
+    cursor: default !important;
+  }
+  .category-filter-header {
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.filters-list {
+  font-family: 'Heebo-Light';
+  font-size: 16px;
+  &>div {
+    cursor: pointer;
+    padding: 5px 0;
+    &:hover {
+      background: $yellow;
+    }
+  }
+}
+
+.wrapper-categories {
+  hr {
+    margin: 22px 0 !important;
+  }
+}

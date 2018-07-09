@@ -1,0 +1,39 @@
+@import "../../assets/css/variables";
+.drawer > div {
+    // top: calc(#{$headerlogo-height} + (2 * #{$headerPadding})) !important;
+    top: 85px!important;
+    background-color: #403a3a!important;
+    padding-top: 21px;
+}
+.drawer a, .drawer .admin-menu div {
+    text-decoration: none;
+    color: white;
+}
+.show-menu {
+    z-index: 99;
+    background-color: white;
+    position: absolute;
+    top: 97px;
+    right: 271px;
+    width: 20px;
+}
+.hide-menu {
+    z-index: 99;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    right: 13px;
+    width: 20px;
+}
+
+.children {
+    width: calc(97% - 256px);
+    position: absolute;
+    top: calc((100px) + (2 * #{$headerPadding})) !important;
+    right: 20px;
+}
+.children.close {
+    width: 100% !important;
+    position: absolute;
+    left: 7px;
+}

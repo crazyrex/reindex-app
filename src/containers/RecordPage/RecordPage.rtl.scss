@@ -1,0 +1,311 @@
+@import "../../assets/css/variables";
+.record-page {
+  .header-site {
+    .logo {
+      width: 180px;
+    }
+    .beta {
+      width: 65px;
+    }
+  }
+  .wrapper-record-content {
+    width: 58%;
+    margin: auto;
+    padding: 50px 0px;
+  }
+  .backLink {
+    margin-bottom: 10px;
+    margin-top: 82px;
+    span {
+      font-family: 'Heebo-Light';
+      color: #0072bc;
+      text-decoration: underline;
+    }
+  }
+  .wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    &>div:first-child {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      &>span:last-child {
+        font-family: 'Heebo-Light';
+        font-size: 16px;
+      }
+    }
+    &>div:last-child {
+      width: 30%;
+    }
+    .name {
+      font-family: 'Heebo-Bold';
+      font-size: 21px;
+    }
+    .phone,
+    .house,
+    .website {
+      font-family: 'Heebo-Light';
+      color: $gray;
+      margin-left: 8px;
+      font-size: 17px;
+    }
+    
+  }
+  .wrapper-icon-content {
+    display: flex;
+    align-items: center;
+    [class^="icon"] {
+      width: 20px !important;
+      height: 20px !important;
+      padding: 0 !important;
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        color: $gray !important;
+      }
+    }
+  }
+  .separate {
+    height: 1px;
+    width: 8%;
+    background-color: #e6e6e6;
+    margin-bottom: 10px;
+  }
+  .tags .wrapper-tags {
+    display: flex;
+    .chip {
+      background-color: #e1e1e1 !important;
+      margin-right: 5px !important;
+      span {
+        font-family: 'Heebo-Light';
+      }
+    }
+  }
+  .more-details {
+    display: flex;
+    margin-top: 23px;
+    &>div:first-child {
+      width: 70%;
+      padding-right: 90px;
+    }
+    .updated {
+      font-family: 'Heebo-Light';
+      color: $gray;
+      margin-left: 8px;
+    }
+    .mdi {
+      color: $gray !important;
+      font-size: 19px !important;
+    }
+    .wrapper-updateBtn button {
+      border: 1px solid !important;
+      border-radius: 24px !important;
+      height: 42px !important;
+    }
+    &>div:last-child>div {
+      margin-bottom: 10px;
+      button {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .footer-actions {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .record-page {
+    width: 100%;
+    .header-site {
+      .header-searchIcon {
+        display: block;
+        button.searchIcon {
+          width: 38px !important;
+          height: 38px !important;
+          padding: 0px !important;
+          border-radius: 50% !important;
+        }
+      }
+    }
+    
+    .wrapper-titles {
+      width: 100%;
+      height: 289px;
+      background-size: cover;
+      position: relative;
+      .name-n-desc {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        color: white;
+        >div:first-child {
+          font-family: 'Heebo-Bold';
+          font-size: 40px;
+        }
+      }
+      .editBtn {
+        top: 68px;
+        right: 0;
+        position: absolute !important;
+        svg {
+          color: white !important;
+        }
+      }
+      .shareBtn {
+        right: 23px;
+        bottom: -24px;
+        position: absolute !important;
+        background: yellow !important;
+        border-radius: 50%;
+        svg {
+          color: black !important;
+        }
+      }
+      .wrapper-socialBtns {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+      }
+    }
+    .wrapper-record-content {
+      width: 90%;
+      margin: auto;
+      margin-top: 33px;
+      padding: 0px;
+      margin-bottom: 100px;
+      svg {
+        color: yellow !important;
+      }
+      .phone,
+      .house,
+      .website {
+        color: black;
+      }
+    }
+    .backLink {
+      display: none;
+    }
+    .wrapper-header {
+      flex-direction: column;
+      &>div:first-child {
+        width: 100%;
+      }
+      &>div:last-child {
+        width: 100%;
+      }
+      
+    }
+    .wrapper-icon-content {
+      padding: 10px 0;
+      [class^="icon"] {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        svg {
+          width: 25px !important;
+          height: 25px !important;
+          color: yellow !important;
+        }
+      }
+    }
+    
+    .tags {
+      overflow: hidden;
+      .wrapper-tags {
+        max-height: 32px;
+      }
+    }
+    
+    .more-details {
+      display: flex;
+      flex-direction: column;
+      &>div:first-child {
+        width: 100%;
+        padding-right: 0;
+      }
+      .wrapper-updated {
+        display: flex;
+        align-items: center;
+        .updated {
+          margin-left: 0;
+          color: black;
+          font-size: 17px;
+        }
+      }
+      .icon-update {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0 !important;
+      }
+    }
+    .footer-actions {
+      display: flex;
+      background-color: black;
+      color: yellow !important;
+      justify-content: space-around;
+      padding: 8px 0px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .phone-container{
+        position: absolute;
+        left: 0;
+        height: 62px;
+        opacity: 0;
+        width: 55%;
+        z-index: 99;
+        .phone {
+          position: absolute;
+          right: 0;
+          left: 0;
+          height: 60px;
+        }
+        
+      }
+      button,
+      a {
+        text-decoration: none !important;
+        padding: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        color: yellow !important;
+        svg {
+          width: 36px !important;
+          height: 36px !important;
+          color: yellow !important;
+        }
+      }
+      &>div,
+      &>a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        &>span:last-child {
+          margin-top: -5px;
+          color: yellow;
+        }
+      }
+    }
+  }
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+  
+  .gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+  }
+  .gmnoprint div {
+    display:none !important;
+  }
+  .gm-style-mtc  {
+    display: none !important;
+  }
+  .gm-style a{
+    display: none !important;
+  }

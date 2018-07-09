@@ -1,0 +1,261 @@
+@import "../../assets/css/variables";
+.cat .content ,.ppls .content{
+  margin-bottom: 62px;
+}
+.card {
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  &.top {
+     border: 3px solid #E0D25E;
+    -moz-box-shadow: -1px -1px 1px 0px yellow;
+    -webkit-box-shadow: -1px -1px 1px 0px yellow;
+    box-shadow: -1px -1px 1px 0px yellow !important;
+    background: #FBF9F3 !important;
+  }
+}
+
+.card-header {
+  padding: 13px 15% 16px 13px!important;
+  &>div:first-child {
+    display: block !important;
+  }
+}
+
+.card-header{
+ button{
+   right: 3px;
+   left: none !important;
+  }
+}
+
+.wrapper-header .wrapper-details {
+  &>div {
+    display: flex;
+    justify-content: space-between;
+    &>div:first-child {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      &>span:last-child {
+        font-family: 'Heebo-Light';
+        font-size: 16px;
+      }
+    }
+    &>div:last-child {
+      width: 25%;
+    }
+  }
+}
+
+.name {
+  font-family: 'Heebo-Bold';
+  font-size: 21px;
+  white-space: normal;
+}
+
+.desc {
+  max-width: 80%;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.wrapper-icon-content {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  white-space: normal;
+  .icon-home,
+  .icon-update,
+  .icon-phone,
+  .icon-businesspage {
+    width: 18px !important;
+    height: 18px !important;
+    padding: 0 !important;
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+      color: $gray !important;
+    }
+  }
+  button+div,
+  button+span {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  .wrapper-logo{
+    width:50px;
+    height:50px;
+  }
+}
+
+.phone,
+.house,
+.updated,
+.businesspage {
+  font-family: 'Heebo-Light';
+  color: $gray;
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+}
+
+.separate {
+  height: 1px;
+  width: 8%;
+  background-color: #e6e6e6;
+  margin-bottom: 10px;
+}
+
+.wrapper-socialBtns {
+  margin-bottom: 10px;
+}
+
+.tags .wrapper-tags {
+  display: flex;
+  flex-wrap: wrap;
+  .chip {
+    background-color: #e1e1e1 !important;
+    margin-left: 5px !important;
+    span {
+      font-family: 'Heebo-Light';
+    }
+  }
+}
+
+.wrapper-expand {
+  display: flex;
+  justify-content: space-between;
+  &>div.wrapper-map {
+    width: 53%;
+  }
+  &>div.wrapper-actions {
+    width: 35%;
+    .wrapper-updated {
+      display: flex;
+      align-items: center;
+      svg {
+        color: #818181 !important;
+      }
+    }
+  }
+}
+
+.wrapper-paginate {
+  text-align: center;
+  margin: 20px;
+  button {
+    border: 1px solid !important;
+    border-radius: 24px !important;
+    height: 48px !important;
+  }
+  +div>div {
+    margin: 0 auto;
+    /*captcha*/
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper-expand {
+    .expand-mobile {
+      display: none;
+    }
+  }
+  .card-header {
+    &>button {
+      margin-top: 0px !important;
+    }
+  
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-header.expanded {
+    padding: 0 !important;
+    top: 13px;
+  }
+  .km {
+    position: absolute;
+    right: 26px;
+    top: 17px;
+    color: $gray-light;
+    font-size: 14px;
+    button {
+      font-size: 17px !important;
+      margin-left: -9px !important;
+      div{
+        svg {
+          color: $gray-light !important;
+        }
+      }
+    }
+  }
+  .wrapper-header { 
+    overflow: hidden;
+    .wrapper-details>div {
+      flex-direction: column;
+      &.expanded {
+        display: none;
+      }
+      &>div:last-child {
+        width: 100%;
+      }
+    }
+    .wrapper-tags {
+      max-height: 32px;
+    }
+   
+    &.expanded {
+        margin-top: -30px;
+    }
+  }
+  .wrapper-expand {
+    flex-direction: column;
+    align-items: center;
+    // margin-top: -30px;
+    &>div.wrapper-actions {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .name-wrapper {
+      text-align: center;
+      .name {
+        display: block;
+      }
+    }
+    .tags .wrapper-tags {
+      margin-top: 25px;
+      justify-content: center;
+    }
+    .separate {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .wrapper-socialBtns {
+      justify-content: center;
+    }
+    .wrapper-updated {
+      text-align: center;
+      display: block !important;
+      button {
+        vertical-align: middle;
+      }
+    }
+  }
+  .wrapper-icon-content {
+     [class^="icon"] {
+      svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+  }
+}

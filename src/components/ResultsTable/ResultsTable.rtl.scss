@@ -1,0 +1,12 @@
+.wrapper-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+.table div div {
+     overflow-y: visible !important;
+     overflow-x: visible !important;
+}
+.table tr th .table tr td{
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}

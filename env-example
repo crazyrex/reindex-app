@@ -1,0 +1,11 @@
+PROJECT_NAME=reindex
+MONGODB_DATA_PATH=../db/mongodb
+ELASTIC_DATA_PATH=../db/elastic
+APP_HTTP_PORT=3000
+API_HTTP_PORT=3005
+DB_NAME=reindex-dev
+RECORDS_INDEX=reindex-records
+HCATEGORIES_INDEX=reindex-categories
+CATEGORIES_INDEX=reindex-cities
+HISTORY_INDEX=reindex-history
+HISTORY_TYPE=search

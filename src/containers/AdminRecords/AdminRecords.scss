@@ -1,0 +1,13 @@
+.admin-records {
+    padding: 30px;
+    .field-label {
+       display: inline-block;
+       min-width: 100px;
+    }
+    input {
+        color: black;
+    }
+    button {
+        margin: 10px;
+    }
+}

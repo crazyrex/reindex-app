@@ -1,0 +1,127 @@
+@import "../../assets/css/variables";
+.header-site {
+  
+  height: 55px;
+    color: white;
+    font-size: 26px;
+    padding-top: 12px !important;
+    padding-left: 13px !important;
+    font-weight: bold;
+  background: $yellow;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 25px 25px;
+  .logo {
+    width: 215px;
+    height: 32px;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+  }
+  .beta {
+    width: 77px;
+    height: 29px;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .wrapper-loginBtns {
+    color: white;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    a {
+      color: white;
+      margin: 10px;
+    }
+  }
+  .wrapper-createBtn {
+    left: 14px;
+    position: fixed;
+    top: 16px;
+    z-index: 9999;
+  }
+  .navigationIcon {
+    display: none;
+  }
+  .header-searchIcon {
+    display: none;
+  }
+}
+
+// @media screen and (min-width: 767px) {
+//   .main .logo-wrapper {
+//     display: none;
+//   }
+// }
+
+// @media screen and (max-width: 767px) {
+  .main-search.search .header-site {
+    height: 52px;
+  }
+  .header-site {
+      padding: 0;
+      .header-content {
+        align-items: center;
+        justify-content: space-around;
+        .navigationIcon {
+          display: block;
+          svg {
+            height: 30px !important;
+            width: 30px !important;
+          }
+        }
+        .logo-wrapper {
+          display: flex;
+          align-items: center;
+          .logo {
+             width: 207px;
+            height: 31px;
+          }
+          .beta {
+              width: 65px;
+            height: 25px;
+          }
+        }
+        .create-wrapper {
+          display: none;
+        }
+      }
+  }
+  .record-page .header-site .header-content{
+    padding: 0 2%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  // .navigationIcon {
+  //   position: absolute;
+  //   top: 13px;
+  //   svg {
+  //     height: 30px !important;
+  //     width: 30px !important;
+  //   }
+  // }
+  // .main-search.search .header-site {
+  //   padding-top: 10px;
+  //   height: 115px;
+  //   .logo {
+  //     margin: auto;
+  //   }
+  // }
+  // .header-site {
+  //   padding: 8px;
+  //   .wrapper-createBtn {
+  //     button {
+  //       height: 30px !important;
+  //       line-height: 30px !important;
+  //       span {
+  //         padding-right: 25px !important;
+  //         padding-left: 25px !important;
+  //       }
+  //     }
+  //   }
+  // }
+// }

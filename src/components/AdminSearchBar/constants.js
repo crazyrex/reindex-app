@@ -1,0 +1,12 @@
+export const LOAD_FILTER_DATA = 'boilerplate/AdminSearchBar/LOAD_FILTER_DATA'; // AUTOCOMPLETE SEARCH
+export const LOAD_FILTER_DATA_SUCCESS = 'boilerplate/AdminSearchBar/LOAD_FILTER_DATA_SUCCESS';
+export const LOAD_CATEGORIES_FILTER_DATA = 'boilerplate/AdminSearchBar/LOAD_ALL_FILTER_DATA'; // CATGEGORIES DATA
+export const LOAD_CATEGORIES_FILTER_DATA_SUCCESS = 'boilerplate/AdminSearchBar/LOAD_ALL_FILTER_DATA_SUCCESS';
+export const LOAD_SUBCATEGORIES = 'boilerplate/AdminSearchBar/LOAD_SUBCATEGORIES';
+export const LOAD_SUBCATEGORIES_SUCCESS = 'boilerplate/AdminSearchBar/LOAD_SUBCATEGORIES_SUCCESS';
+export const SET_ACTIVE_TAB = 'boilerplate/AdminSearchBar/SET_ACTIVE_TAB';
+export const UPDATE_SEARCH_OBJ = 'boilerplate/AdminSearchBar/UPDATE_SEARCH_OBJ';
+export const REDUCE_FILTERS = 'boilerplate/AdminSearchBar/REDUCE_FILTERS';
+export const EMPTY_SUBCATEGORIES = 'boilerplate/AdminSearchBar/EMPTY_SUBCATEGORIES';
+export const LOAD_HIERARCHY_FILTER_DATA = 'boilerplate/AdminSearchBar/LOAD_HIERARCHY_FILTER_DATA';
+export const LOAD_HIERARCHY_FILTER_DATA_SUCCESS = 'boilerplate/AdminSearchBar/LOAD_HIERARCHY_FILTER_DATA_SUCCESS';

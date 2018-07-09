@@ -1,0 +1,5 @@
+@import "../../assets/css/variables";
+
+.wrapper-form {
+  margin-top: calc(#{$headerlogo-height} + (2 * #{$headerPadding}));
+}
