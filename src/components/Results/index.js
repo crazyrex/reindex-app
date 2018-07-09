@@ -33,10 +33,11 @@ function splitTags(tagsStr, catArr, isDetectmob) {
   arr = arr.concat(catArr);
   arr = arr.map((e) => { if (e) return e.trim(); return e; });
   arr = _.uniq(arr);
+  console.log('orit arr', arr);
   if (isDetectmob)
     _.reverse(arr);
   return (<div className="wrapper-tags">{arr.map((tag, index) =>
-    (tag !== '' ? <Chip className="chip" key={index} onTouchTap={() => this.onTouchTap(tag)}>
+    (tag ? <Chip className="chip" key={index} onTouchTap={() => this.onTouchTap(tag)}>
       {tag}
     </Chip> : '')
   )}
@@ -242,7 +243,7 @@ class Results extends React.Component {
                 </div>
                 <div className="separate"></div>
                 <div className="tags">
-                  {splitTags(res._source.tags, res._source.categories, this.state.detectmob)}
+                  {splitTags(res._source.reindexTags, res._source.categories, this.state.detectmob)}
                 </div>
               </div>
             </CardHeader>
@@ -255,7 +256,7 @@ class Results extends React.Component {
                     <span>{res._source.reindexDescription}</span>
                   </div>
                   <div className="tags">
-                    {splitTags(res._source.tags, res._source.categories)}
+                    {splitTags(res._source.reindexTags, res._source.categories)}
                   </div>
                   <div className="separate"></div>
                   <div>

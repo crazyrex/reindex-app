@@ -26,11 +26,11 @@ class ResultsTable extends React.Component {
     return;
   const arr = tagsStr ? tagsStr.split('|') : [];
   return (<div className="wrapper-tags">{arr.map((tag, key) =>
-      tag !== ' ' ? <Chip key={key} backgroundColor="#3852a4" labelColor="#ffffff" onTouchTap={() => this.onTouchTap(tag)}>
+      tag ? <Chip key={key} backgroundColor="#3852a4" labelColor="#ffffff" onTouchTap={() => this.onTouchTap(tag)}>
        <abbr title={tag}>{tag}</abbr>
       </Chip> : ''
     )}{catArr.map((tag, key) =>
-    tag !== ' ' ? <Chip key={key} backgroundColor="#FB6a65" labelColor="#ffffff" onTouchTap={() => this.onTouchTap(tag)}>
+    tag ? <Chip key={key} backgroundColor="#FB6a65" labelColor="#ffffff" onTouchTap={() => this.onTouchTap(tag)}>
       <abbr title={tag}>{tag}</abbr>
     </Chip> : ''
     )}
@@ -185,7 +185,7 @@ class ResultsTable extends React.Component {
                   {this.rendercol(res._source.business_description,'business_description',res._id)}
                   {this.rendercol(res._source.website,'website',res._id)}
                   {this.rendercol(res._source.email,'email',res._id)}
-               <TableCell style={{width: '170px'}}>{this.splitTags(res._source.tags, res._source.categories)}</TableCell>
+               <TableCell style={{width: '170px'}}>{this.splitTags(res._source.reindexTags, res._source.categories)}</TableCell>
                <TableCell style={{width: '120px'}}><div onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}><RecordSettings record={res} /></div></TableCell>
              </TableRow>
            

@@ -65,9 +65,9 @@ export class AdminRecords extends React.PureComponent {
             <input type="text" value={this.state[field]} placeholder={`your ${field} field`} name={field} onChange={this.inputChange} />
           </div>
         ))}
-          <UploadFile {...this.state.uploaderProps} >
+          <UploadFile {...this.state.uploaderProps} disabled={!this.state.uploaderProps.action}>
             <a>
-              <FlatButton label={'Upload Records CSV File'} />
+              <FlatButton label={'Upload Records CSV File'} disabled={!this.state.uploaderProps.action} />
             </a>
           </UploadFile>
         </div>

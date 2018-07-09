@@ -26,8 +26,8 @@ function processResults(results) {
   results.map((res) => {
     const lastCat = res._source.categories[res._source.categories.length - 1];
     let lastTag;
-    if (res._source.tags) {
-      lastTag = res._source.tags.split('|')[res._source.tags.split('|').length - 1] || res._source.tags.split('|')[res._source.tags.split('|').length - 2];
+    if (res._source.reindexTags) {
+      lastTag = res._source.reindexTags.split('|')[res._source.reindexTags.split('|').length - 1] || res._source.reindexTags.split('|')[res._source.reindexTags.split('|').length - 2];
       lastTag = lastTag.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
     }
     res._source.link = `/biz/${res._source.address_city}/${lastCat || lastTag || ''}?id=${res._id}`;
