@@ -45,7 +45,7 @@ class SearchBar extends React.PureComponent {
   handleCategoriesRequest(searchText, index, tabType) {
     if (index !== -1) this.props.loadSubCategories(searchText, tabType, false);
     if (index === -1) this.props.loadSubCategoriesForText(searchText);
-    //this.props.loadHierarchyFilterData(hierarchyFilters.kashrut, 0, hierarchyFilters.kashrut.content, true);
+    // this.props.loadHierarchyFilterData(hierarchyFilters.kashrut, 0, hierarchyFilters.kashrut.content, true);
     const key = (index !== -1) ? 'categories' : 'q';
     this.updateSearchLocation(key, searchText, 'businesses', index);
     // this.props.onNewRequest();

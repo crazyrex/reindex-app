@@ -13,6 +13,7 @@ import HomeIcon from 'material-ui/svg-icons/action/home';
 import UpdateIcon from 'material-ui/svg-icons/action/update';
 import BusinessIcon from 'material-ui/svg-icons/places/business-center';
 import PlaceIcon from 'material-ui/svg-icons/maps/place';
+import GMap from 'components/GMap';
 import config from 'ReindexConfig';
 
 let translate;
@@ -33,7 +34,6 @@ function splitTags(tagsStr, catArr, isDetectmob) {
   arr = arr.concat(catArr);
   arr = arr.map((e) => { if (e) return e.trim(); return e; });
   arr = _.uniq(arr);
-  console.log('orit arr', arr);
   if (isDetectmob)
     _.reverse(arr);
   return (<div className="wrapper-tags">{arr.map((tag, index) =>
@@ -196,8 +196,7 @@ class Results extends React.Component {
             className={`card ${res._source.score_value && res._source.score_value > 0 ? 'top' : ''}`}
           >
             <CardHeader
-              showExpandableButton={!this.state.detectmob ||
-                config.searchTabs[res._source.listing_type_1] === 'people'}
+              showExpandableButton={!this.state.detectmob}
               className={`card-header ${this.state.results[index] ? '' : ''}`}
               actAsExpander={!this.state.detectmob}
             >
@@ -213,8 +212,7 @@ class Results extends React.Component {
                         </div>
                         : ''}
                       <span className="name">
-                        {res._source.reindexTitle ||
-                          `${res._source.first_name} ${res._source.last_name}`}
+                        {res._source.reindexTitle}
                       </span>
                       <div className="desc">{res._source.reindexDescription}</div>
                     </div>
@@ -222,11 +220,7 @@ class Results extends React.Component {
                   
                       <div className="wrapper-icon-content">
                         <IconButton className="icon-home" ><HomeIcon /></IconButton>
-                        <span className="house">{res._source.address_street_name}
-                          &nbsp;{res._source.address_street_number}
-                          &nbsp;{res._source.address_street_entrance}
-                          &nbsp;{res._source.address_neighborhood}
-                          &nbsp;{res._source.address_city}
+                        <span className="house">{res._source.reindexLocationString}
                         </span>
                         <div className="wrapper-logo"><img src={res._source.Logo} width="90px" height="50px"></img></div>
                       </div>
@@ -278,7 +272,7 @@ class Results extends React.Component {
                   </div>*/}
                 </div>
                 <div className="wrapper-map">
-                  { /*<GMap location={res._source} />*/}
+                  <GMap location={res._source} />
                 </div>
                 <div className="wrapper-actions">
                   <div style={{ margin: '10px 0' }}>

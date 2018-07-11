@@ -12,23 +12,26 @@ class GMap extends React.PureComponent {
     };
     this.renderMap = this.renderMap.bind(this);
   }
-  // componentWillMount() {
-  //   this.renderMap(this.props.location);
-  // }
-  componentWillReceiveProps(nextProps) {
-    this.renderMap(nextProps.location);
+  componentWillMount() {
+    this.renderMap(this.props.location.reindexLocationPoints, this.props.location.reindexLocationString);
   }
 
-  renderMap(address) {
-    geocoder = new window.google.maps.Geocoder();
-    geocoder.geocode({ address: `${address.address_street_name} ${address.address_street_number} ${address.address_city}` }, (results, status) => {
-      if (!results || !results.length) return;
-      const obj = {
-        lat: results[0].geometry.location.lat(),
-        lng: results[0].geometry.location.lng(),
-      };
-      this.setState({ location: obj });
-    });
+  renderMap(points, address) {
+    if (points && points.length) {
+      this.setState({ location: { lat: points[1], lng: points[0] } });
+      return;
+    }
+    if (address) {
+      geocoder = new window.google.maps.Geocoder();
+      geocoder.geocode({ address }, (results) => {
+        if (!results || !results.length) return;
+        const obj = {
+          lat: results[0].geometry.location.lat(),
+          lng: results[0].geometry.location.lng(),
+        };
+        this.setState({ location: obj });
+      });
+    }
   }
   render() {
     if (typeof window === undefined || typeof window === 'undefined') {

@@ -11,7 +11,7 @@ export class AdminRecords extends React.PureComponent {
 
   constructor(props) {
     super(props);
-    this.fields = ['id', 'title', 'description', 'location', 'tags'];
+    this.fields = ['id', 'title', 'description', 'tags', 'locationString', 'locationPoints'];
     const initialState = {
       uploaderProps: {}
     };

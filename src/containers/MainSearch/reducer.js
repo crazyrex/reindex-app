@@ -45,7 +45,6 @@ function mainSearchReducer(state = initialState, action) {
         offsetResults: action.data.page,
       });
     case ISDATA_RESULT:
-    console.log('111111',action)
       return Object.assign({}, state, {
         isData: action.result,
       });
