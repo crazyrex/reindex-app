@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import AutoComplete from 'material-ui/AutoComplete';
@@ -94,18 +95,18 @@ class SearchBar extends React.PureComponent {
   }
 }
 SearchBar.propTypes = {
-  categories: React.PropTypes.array,
-  onNewRequest: React.PropTypes.func,
-  search: React.PropTypes.object,
-  handleSearchBtn: React.PropTypes.func,
-  loadSubCategories: React.PropTypes.func,
-  loadSubCategoriesForText: React.PropTypes.func,
-  handleInput: React.PropTypes.func,
-  setActiveTab: React.PropTypes.func,
-  updateSearchObj: React.PropTypes.func,
-  emptySubCategories: React.PropTypes.func,
-  loadCategoriesFilterData: React.PropTypes.func,
-  loadHierarchyFilterData: React.PropTypes.func,
+  categories: PropTypes.array,
+  onNewRequest: PropTypes.func,
+  search: PropTypes.object,
+  handleSearchBtn: PropTypes.func,
+  loadSubCategories: PropTypes.func,
+  loadSubCategoriesForText: PropTypes.func,
+  handleInput: PropTypes.func,
+  setActiveTab: PropTypes.func,
+  updateSearchObj: PropTypes.func,
+  emptySubCategories: PropTypes.func,
+  loadCategoriesFilterData: PropTypes.func,
+  loadHierarchyFilterData: PropTypes.func,
 };
 export function mapStateToProps(state) {
   return {

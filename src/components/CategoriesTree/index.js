@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import IconButton from 'material-ui/IconButton';
 import TextField from 'material-ui/TextField';
@@ -266,17 +267,17 @@ class CategoriesTree extends React.PureComponent {
 }
 
 CategoriesTree.propTypes = {
-  categories: React.PropTypes.array,
-  selectedCategories: React.PropTypes.array,
-  onUpdate: React.PropTypes.func,
-  parentsLoaded: React.PropTypes.bool,
-  changeFieldValue: React.PropTypes.func,
-  deleteTag: React.PropTypes.func,
-  deleteTags: React.PropTypes.func,
-  initCategories: React.PropTypes.func,
-  initialValues: React.PropTypes.array,
-  src: React.PropTypes.string,
-  updateTree: React.PropTypes.func,
+  categories: PropTypes.array,
+  selectedCategories: PropTypes.array,
+  onUpdate: PropTypes.func,
+  parentsLoaded: PropTypes.bool,
+  changeFieldValue: PropTypes.func,
+  deleteTag: PropTypes.func,
+  deleteTags: PropTypes.func,
+  initCategories: PropTypes.func,
+  initialValues: PropTypes.array,
+  src: PropTypes.string,
+  updateTree: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

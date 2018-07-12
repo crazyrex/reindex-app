@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   AutoRotatingCarousel,
   Slide
@@ -120,7 +121,7 @@ class Mapbox extends React.PureComponent {
 }
 
 Mapbox.propTypes = {
-  location: React.PropTypes.object,
+  location: PropTypes.object,
 };
 
 export default Mapbox;

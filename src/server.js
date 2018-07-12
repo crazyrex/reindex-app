@@ -1,11 +1,9 @@
 import Express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import favicon from 'serve-favicon';
 import compression from 'compression';
 import http from 'http';
 import proxy from 'express-http-proxy';
-import path from 'path';
 import url from 'url';
 import { match, createMemoryHistory } from 'react-router';
 
@@ -31,7 +29,6 @@ app.use('/api/*', proxy(config.apiBaseUrl, {
   // eslint-disable-next-line
   forwardPath: (req, res) => url.parse(req.originalUrl).path
 }));
-
 app.use((req, res) => {
   if (__DEVELOPMENT__) {
     webpackIsomorphicTools.refresh();

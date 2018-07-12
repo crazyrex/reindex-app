@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
  import HeaderSite from 'components/HeaderSite';
@@ -41,12 +42,12 @@ export class AuthPage extends React.PureComponent {
 
 
 AuthPage.propTypes = {
-  changeState: React.PropTypes.func,
-  login: React.PropTypes.func,
-  register: React.PropTypes.func,
-  routeParams: React.PropTypes.object,
-  loggedIn: React.PropTypes.bool,
-  redirect: React.PropTypes.func,
+  changeState: PropTypes.func,
+  login: PropTypes.func,
+  register: PropTypes.func,
+  routeParams: PropTypes.object,
+  loggedIn: PropTypes.bool,
+  redirect: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

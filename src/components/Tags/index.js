@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Chip from 'material-ui/Chip';
 
 import './Tags.scss';
@@ -29,8 +30,8 @@ class Tags extends React.Component {
 }
 
 Tags.propTypes = {
-  data: React.PropTypes.array,
-  onTouchTap: React.PropTypes.func,
+  data: PropTypes.array,
+  onTouchTap: PropTypes.func,
 };
 
 

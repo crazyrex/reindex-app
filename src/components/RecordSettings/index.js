@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
@@ -99,12 +100,12 @@ class RecordSettings extends React.Component {
 }
 
 RecordSettings.propTypes = {
-  updateScore: React.PropTypes.func,
-  scoreData: React.PropTypes.array,
-  record: React.PropTypes.object,
-  scoreObj: React.PropTypes.object,
-  recordSettingsAlert: React.PropTypes.object,
-  closeRecordSettingsAlert: React.PropTypes.func,
+  updateScore: PropTypes.func,
+  scoreData: PropTypes.array,
+  record: PropTypes.object,
+  scoreObj: PropTypes.object,
+  recordSettingsAlert: PropTypes.object,
+  closeRecordSettingsAlert: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

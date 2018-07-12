@@ -4,6 +4,7 @@
  * List all the features
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import Snackbar from 'material-ui/Snackbar';
@@ -49,8 +50,8 @@ export class AdminCategories extends React.PureComponent {
 
 
 AdminCategories.propTypes = {
-  actionResponseAlert: React.PropTypes.object,
-  closeActionResponseAlert: React.PropTypes.func,
+  actionResponseAlert: PropTypes.object,
+  closeActionResponseAlert: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

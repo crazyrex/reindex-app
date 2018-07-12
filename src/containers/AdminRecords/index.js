@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import UploadFile from 'rc-upload';
 import Snackbar from 'material-ui/Snackbar';
@@ -78,8 +79,8 @@ export class AdminRecords extends React.PureComponent {
 
 
 AdminRecords.propTypes = {
-  // actionResponseAlert: React.PropTypes.object,
-  // closeActionResponseAlert: React.PropTypes.func,
+  // actionResponseAlert: PropTypes.object,
+  // closeActionResponseAlert: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

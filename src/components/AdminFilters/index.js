@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import AutoComplete from 'material-ui/AutoComplete';
@@ -121,16 +122,16 @@ class Filters extends React.PureComponent {
 }
 
 Filters.propTypes = {
-  categories: React.PropTypes.array,
-  onNewRequest: React.PropTypes.func,
-  search: React.PropTypes.object,
-  handleChange: React.PropTypes.func,
-  pageState: React.PropTypes.string,
-  filters: React.PropTypes.object,
-  updateSearchObj: React.PropTypes.func,
-  reduceFilters: React.PropTypes.func,
-  hierarchyFiltersCategories: React.PropTypes.object,
-  loadHierarchyFilterData: React.PropTypes.func,
+  categories: PropTypes.array,
+  onNewRequest: PropTypes.func,
+  search: PropTypes.object,
+  handleChange: PropTypes.func,
+  pageState: PropTypes.string,
+  filters: PropTypes.object,
+  updateSearchObj: PropTypes.func,
+  reduceFilters: PropTypes.func,
+  hierarchyFiltersCategories: PropTypes.object,
+  loadHierarchyFilterData: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import Filters from 'components/Filters';
@@ -276,20 +277,20 @@ export class ResultsPage extends React.PureComponent {
 
 
 ResultsPage.propTypes = {
-  results: React.PropTypes.array,
-  updateRecord: React.PropTypes.func,
-  handleNewRequest: React.PropTypes.func,
-  handleSearchBtn: React.PropTypes.func,
-  updateRecordAlert: React.PropTypes.object,
-  closeUpdateRecordModal: React.PropTypes.func,
-  totalResults: React.PropTypes.number,
-  limitResults: React.PropTypes.number,
-  handleResultsPageClick: React.PropTypes.func,
-  searchBarData: React.PropTypes.object,
-  offsetResults: React.PropTypes.number,
-  loading: React.PropTypes.bool,
-  query: React.PropTypes.object,
-  goToTnxPage: React.PropTypes.bool,
+  results: PropTypes.array,
+  updateRecord: PropTypes.func,
+  handleNewRequest: PropTypes.func,
+  handleSearchBtn: PropTypes.func,
+  updateRecordAlert: PropTypes.object,
+  closeUpdateRecordModal: PropTypes.func,
+  totalResults: PropTypes.number,
+  limitResults: PropTypes.number,
+  handleResultsPageClick: PropTypes.func,
+  searchBarData: PropTypes.object,
+  offsetResults: PropTypes.number,
+  loading: PropTypes.bool,
+  query: PropTypes.object,
+  goToTnxPage: PropTypes.bool,
 };
 
 export function mapStateToProps(state) {

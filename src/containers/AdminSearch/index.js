@@ -4,6 +4,7 @@
  * List all the features
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 //import AdminSearchBar from 'components/AdminSearchBar';
@@ -272,20 +273,20 @@ export class AdminSearch extends React.PureComponent {
 
 
 AdminSearch.propTypes = {
-  results: React.PropTypes.array,
-  setSelectedRows: React.PropTypes.func,
-  loadCategoriesTree: React.PropTypes.func,
-  relateToCategory: React.PropTypes.func,
-  handleNewRequest: React.PropTypes.func,
-  handleSearchBtn: React.PropTypes.func,
-  handleSortClick: React.PropTypes.func,
-  totalResults: React.PropTypes.number,
-  limitResults: React.PropTypes.number,
-  handleResultsPageClick: React.PropTypes.func,
-  searchBarData: React.PropTypes.object,
-  connect2CategoryAlert: React.PropTypes.object,
-  closeConnect2Category: React.PropTypes.func,
-  loadScoreData: React.PropTypes.func,
+  results: PropTypes.array,
+  setSelectedRows: PropTypes.func,
+  loadCategoriesTree: PropTypes.func,
+  relateToCategory: PropTypes.func,
+  handleNewRequest: PropTypes.func,
+  handleSearchBtn: PropTypes.func,
+  handleSortClick: PropTypes.func,
+  totalResults: PropTypes.number,
+  limitResults: PropTypes.number,
+  handleResultsPageClick: PropTypes.func,
+  searchBarData: PropTypes.object,
+  connect2CategoryAlert: PropTypes.object,
+  closeConnect2Category: PropTypes.func,
+  loadScoreData: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavigationExpandMore from 'material-ui/svg-icons/navigation/expand-more';
 import NavigationExpandLess from 'material-ui/svg-icons/navigation/expand-less';
 import abroch from 'assets/img/no-results.png';
@@ -68,7 +69,7 @@ class NoResults extends React.Component {
 }
 
 NoResults.propTypes = {
-  data: React.PropTypes.object,
+  data: PropTypes.object,
 };
 
 export default NoResults;

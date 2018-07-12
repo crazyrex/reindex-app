@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import Chip from 'material-ui/Chip';
 import RecordSettings from 'components/RecordSettings';
@@ -215,13 +216,13 @@ class ResultsTable extends React.Component {
 }
 
 ResultsTable.propTypes = {
-  data: React.PropTypes.array,
-  handleRowSelection: React.PropTypes.func,
-  total: React.PropTypes.number,
-  limit: React.PropTypes.number,
-  handlePageClick: React.PropTypes.func,
-  handleCellClick: React.PropTypes.func,
-  onSelectAllClick:React.PropTypes.func,
+  data: PropTypes.array,
+  handleRowSelection: PropTypes.func,
+  total: PropTypes.number,
+  limit: PropTypes.number,
+  handlePageClick: PropTypes.func,
+  handleCellClick: PropTypes.func,
+  onSelectAllClick:PropTypes.func,
 };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import Drawer from 'material-ui/Drawer';
@@ -42,8 +43,8 @@ class HeaderSite extends React.Component {
 }
 
 HeaderSite.propTypes = {
-    logoClicked: React.PropTypes.func,
-    initSearch: React.PropTypes.func,
+    logoClicked: PropTypes.func,
+    initSearch: PropTypes.func,
 };
 
 export function mapStateToProps() {

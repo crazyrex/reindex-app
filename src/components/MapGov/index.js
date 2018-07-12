@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import proj4 from 'proj4';
 require('./Mapbox.scss');
 
@@ -76,7 +77,7 @@ class GovMap extends React.PureComponent {
 }
 
 GovMap.propTypes = {
-  location: React.PropTypes.object,
+  location: PropTypes.object,
 };
 
 export default GovMap;

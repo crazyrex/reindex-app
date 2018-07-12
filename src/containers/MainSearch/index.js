@@ -1,5 +1,6 @@
 'use strict';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import Filters from 'components/Filters';
@@ -171,21 +172,21 @@ export class MainSearch extends React.PureComponent {
 
 
 MainSearch.propTypes = {
-  state: React.PropTypes.string,
-  results: React.PropTypes.array,
-  changeState: React.PropTypes.func,
-  updateRecord: React.PropTypes.func,
-  handleNewRequest: React.PropTypes.func,
-  handleSearchBtn: React.PropTypes.func,
-  updateRecordAlert: React.PropTypes.object,
-  closeUpdateRecordModal: React.PropTypes.func,
-  totalResults: React.PropTypes.number,
-  limitResults: React.PropTypes.number,
-  handleResultsPageClick: React.PropTypes.func,
-  searchBarData: React.PropTypes.object,
-  offsetResults: React.PropTypes.number,
-  height: React.PropTypes.number,
-  isDisplayIcons: React.PropTypes.bool,
+  state: PropTypes.string,
+  results: PropTypes.array,
+  changeState: PropTypes.func,
+  updateRecord: PropTypes.func,
+  handleNewRequest: PropTypes.func,
+  handleSearchBtn: PropTypes.func,
+  updateRecordAlert: PropTypes.object,
+  closeUpdateRecordModal: PropTypes.func,
+  totalResults: PropTypes.number,
+  limitResults: PropTypes.number,
+  handleResultsPageClick: PropTypes.func,
+  searchBarData: PropTypes.object,
+  offsetResults: PropTypes.number,
+  height: PropTypes.number,
+  isDisplayIcons: PropTypes.bool,
 };
 
 export function mapStateToProps(state) {

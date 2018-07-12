@@ -1,9 +1,9 @@
 /* eslint-disable */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
-import config from '../config';
 
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -30,18 +30,15 @@ class Html extends Component {
           {head.link.toComponent()}
           {head.script.toComponent()}
           <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
-          {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, key) =>
             <link href={assets.styles[style]} key={key} media="screen, projection" rel="stylesheet" type="text/css" charSet="UTF-8" />
           )}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://new.govmap.gov.il/govmap/api/govmap.api.js"></script>  
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://new.govmap.gov.il/govmap/api/govmap.api.js"></script>  
 
-          {/* <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTI0krUB7cDYMDYDxuXV1aSAFQ25w7Lw" async defer></script> */}
-          {/* <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=f90ba10596814' async='true'></script> */}
 
         </head>
         <body>

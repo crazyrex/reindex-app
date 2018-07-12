@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ImageMapper from 'react-image-mapper';
 import { loadLandscapes, landscapesLoaded } from './actions';
 import { getSetting } from './../../components/Settings/actions';
@@ -66,8 +67,8 @@ class Landscape extends React.PureComponent {
 }
 
 Landscape.propTypes = {
-    loadLandscapes: React.PropTypes.func,
-    loadImage: React.PropTypes.func
+    loadLandscapes: PropTypes.func,
+    loadImage: PropTypes.func
 };
 
 export function mapStateToProps(state) {

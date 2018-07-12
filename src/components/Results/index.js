@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import IconButton from 'material-ui/IconButton';
@@ -322,14 +323,14 @@ class Results extends React.Component {
 }
 
 Results.propTypes = {
-  data: React.PropTypes.array,
-  updateRecord: React.PropTypes.func,
-  total: React.PropTypes.number,
-  limit: React.PropTypes.number,
-  offset: React.PropTypes.number,
-  handlePageClick: React.PropTypes.func,
-  location: React.PropTypes.object,
-  cleanSelectedRecordData: React.PropTypes.func,
+  data: PropTypes.array,
+  updateRecord: PropTypes.func,
+  total: PropTypes.number,
+  limit: PropTypes.number,
+  offset: PropTypes.number,
+  handlePageClick: PropTypes.func,
+  location: PropTypes.object,
+  cleanSelectedRecordData: PropTypes.func,
 };
 
 export function mapStateToProps() {

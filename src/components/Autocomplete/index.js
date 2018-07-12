@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import { detectmob } from 'utils/functions';
 import { connect } from 'react-redux';
@@ -44,12 +45,12 @@ class Autocomplete extends React.PureComponent {
 }
 
 Autocomplete.propTypes = {
-  dataSource: React.PropTypes.array,
-  handleUpdateInput: React.PropTypes.func,
-  onNewRequest: React.PropTypes.func,
-  dataSourceConfig: React.PropTypes.object,
-  hintText: React.PropTypes.string,
-  text: React.PropTypes.string,
+  dataSource: PropTypes.array,
+  handleUpdateInput: PropTypes.func,
+  onNewRequest: PropTypes.func,
+  dataSourceConfig: PropTypes.object,
+  hintText: PropTypes.string,
+  text: PropTypes.string,
 };
 
 

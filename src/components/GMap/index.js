@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { detectmob } from 'utils/functions';
 
 let geocoder, Marker, GoogleMap, GoogleMapLoader, googlemaploader;
@@ -76,7 +77,7 @@ class GMap extends React.PureComponent {
 }
 
 GMap.propTypes = {
-  location: React.PropTypes.object,
+  location: PropTypes.object,
 };
 
 export default GMap;

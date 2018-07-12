@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field, reduxForm, change } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
@@ -44,9 +45,9 @@ const renderField = ({ input, label, meta: { touched, error } }) => (
 );
 
 renderField.propTypes = {
-  input: React.PropTypes.object,
-  label: React.PropTypes.string,
-  meta: React.PropTypes.object,
+  input: PropTypes.object,
+  label: PropTypes.string,
+  meta: PropTypes.object,
 };
 
 let DetailsForm = class DetailsForm extends React.Component {
@@ -197,12 +198,12 @@ let DetailsForm = class DetailsForm extends React.Component {
 };
 
 DetailsForm.propTypes = {
-  handleSubmit: React.PropTypes.func,
-  loadData: React.PropTypes.func,
-  open: React.PropTypes.bool,
-  handleClose: React.PropTypes.func,
-  adminUpdate: React.PropTypes.bool,
-  cleanData: React.PropTypes.func,
+  handleSubmit: PropTypes.func,
+  loadData: PropTypes.func,
+  open: PropTypes.bool,
+  handleClose: PropTypes.func,
+  adminUpdate: PropTypes.bool,
+  cleanData: PropTypes.func,
 };
 
 export function mapStateToProps(state) {

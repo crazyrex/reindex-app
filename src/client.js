@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 // import GoogleAnalytics from 'react-ga';
 import injectTapEventPlugin from 'react-tap-event-plugin';

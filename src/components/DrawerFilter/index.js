@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import CloseIcon from 'material-ui/svg-icons/navigation/close';
@@ -47,8 +48,8 @@ class DrawerFilter extends React.Component {
 }
 
 DrawerFilter.propTypes = {
-  onNewRequest: React.PropTypes.func,
-  pageState: React.PropTypes.string,
+  onNewRequest: PropTypes.func,
+  pageState: PropTypes.string,
 };
 
 export default DrawerFilter;

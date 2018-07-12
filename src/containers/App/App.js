@@ -1,9 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
-import Helmet from 'react-helmet';
-import { Explore } from 'components';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import CopyRightIcon from 'material-ui/svg-icons/action/copyright';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { getLocationData } from 'utils/functions';
 import { detectmob } from '../../utils/functions';
@@ -44,9 +42,7 @@ class App extends Component {
   }
 
   loadResults(location, locationData) {
-    if (locationData.tab === 'businesses' || locationData.tab === 'people') {
-      this.props.loadResults({ page: 1, location: location });
-    }
+    this.props.loadResults({ page: 1, location: location });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -67,10 +63,6 @@ class App extends Component {
     }
   }
 
-  handleDismissClick(e) {
-    this.props.resetErrorMessage();
-    e.preventDefault();
-  }
 
   handleChange(nextValue) {
     this.props.navigate(`/${nextValue}`);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { detectmob, getPhone } from 'utils/functions';
 import FlatButton from 'material-ui/FlatButton';
@@ -171,7 +172,7 @@ class Phone extends React.PureComponent {
 }
 
 Phone.propTypes = {
-  data: React.PropTypes.object,
+  data: PropTypes.object,
 };
 
 

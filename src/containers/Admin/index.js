@@ -4,6 +4,7 @@
  * List all the features
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import HeaderSite from 'components/HeaderSite';
@@ -66,7 +67,7 @@ class Admin extends React.PureComponent {
 
 
 Admin.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export function mapStateToProps(state) {

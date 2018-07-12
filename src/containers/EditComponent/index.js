@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {loadRecords, recordsLoaded,loadTooltips,tooltipsLoaded,setTooltip,deleteTooltip,updateTooltip} from './actions';
 import {createSetting} from './../../components/Settings/actions';
-import PropTypes from 'prop-types';
 import keycode from 'keycode';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
@@ -2562,20 +2562,20 @@ export function mapDispatchToProps(dispatch) {
 
 
 EditComponent.propTypes = {
-	handleInput: React.PropTypes.func,
-	records: React.PropTypes.array,
-	tooltips:React.PropTypes.array,
-	loadRecords: React.PropTypes.func,
-	onNewRequest: React.PropTypes.func,
-	search: React.PropTypes.object,
-	handleSearchBtn: React.PropTypes.func,
-	loadSubCategories: React.PropTypes.func,
-	setActiveTab: React.PropTypes.func,
-	updateSearchObj: React.PropTypes.func,
-	loadCategoriesFilterData: React.PropTypes.func,
-	createSetting: React.PropTypes.func,
-	loadTooltips:  React.PropTypes.func,
-    loadImage: React.PropTypes.func,
+	handleInput: PropTypes.func,
+	records: PropTypes.array,
+	tooltips:PropTypes.array,
+	loadRecords: PropTypes.func,
+	onNewRequest: PropTypes.func,
+	search: PropTypes.object,
+	handleSearchBtn: PropTypes.func,
+	loadSubCategories: PropTypes.func,
+	setActiveTab: PropTypes.func,
+	updateSearchObj: PropTypes.func,
+	loadCategoriesFilterData: PropTypes.func,
+	createSetting: PropTypes.func,
+	loadTooltips:  PropTypes.func,
+    loadImage: PropTypes.func,
 };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import organizations from 'assets/img/organizations.png';
@@ -72,9 +73,9 @@ class SearchIcons extends React.Component {
 }
 
 SearchIcons.propTypes = {
-  data: React.PropTypes.object,
-  handleClick: React.PropTypes.func,
-  loadSubCategories: React.PropTypes.func,
+  data: PropTypes.object,
+  handleClick: PropTypes.func,
+  loadSubCategories: PropTypes.func,
 };
 
 export function mapDispatchToProps(dispatch) {

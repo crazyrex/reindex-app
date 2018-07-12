@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -49,10 +50,10 @@ function HistoryTable(props) {
 }
 
 HistoryTable.propTypes = {
-  data: React.PropTypes.array,
-  total: React.PropTypes.number,
-  limit: React.PropTypes.number,
-  handlePageClick: React.PropTypes.func,
+  data: PropTypes.array,
+  total: PropTypes.number,
+  limit: PropTypes.number,
+  handlePageClick: PropTypes.func,
 };
 
 

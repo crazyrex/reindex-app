@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { browserHistory } from 'react-router';
 import { Field, reduxForm, formValueSelector } from 'redux-form';
 import TextField from 'material-ui/TextField';
@@ -35,9 +36,9 @@ const renderField = ({ input, label, meta: { touched, error } }) => (
 );
 
 renderField.propTypes = {
-  input: React.PropTypes.object,
-  label: React.PropTypes.string,
-  meta: React.PropTypes.object,
+  input: PropTypes.object,
+  label: PropTypes.string,
+  meta: PropTypes.object,
 };
 
 let CreateForm = class CreateForm extends React.Component {
@@ -244,14 +245,14 @@ let CreateForm = class CreateForm extends React.Component {
 };
 
 CreateForm.propTypes = {
-  handleSubmit: React.PropTypes.func,
-  createRecord: React.PropTypes.func,
-  createRecordAlert: React.PropTypes.object,
-  closeCreateRecordModal: React.PropTypes.func,
-  register2MailingList: React.PropTypes.func,
-  router: React.PropTypes.object,
-  goToTnxPage: React.PropTypes.bool,
-  data: React.PropTypes.object,
+  handleSubmit: PropTypes.func,
+  createRecord: PropTypes.func,
+  createRecordAlert: PropTypes.object,
+  closeCreateRecordModal: PropTypes.func,
+  register2MailingList: PropTypes.func,
+  router: PropTypes.object,
+  goToTnxPage: PropTypes.bool,
+  data: PropTypes.object,
 };
 
 export function mapStateToProps(state) {

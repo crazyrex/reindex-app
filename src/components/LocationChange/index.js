@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import { connect } from 'react-redux';
 import IconButton from 'material-ui/IconButton';
@@ -118,9 +119,9 @@ class LocationChange extends React.Component {
 }
 
 LocationChange.propTypes = {
-  onNewRequest: React.PropTypes.func,
-  pageState: React.PropTypes.string,
-  filters: React.PropTypes.object,
+  onNewRequest: PropTypes.func,
+  pageState: PropTypes.string,
+  filters: PropTypes.object,
 
 };
 export function mapStateToProps(state) {

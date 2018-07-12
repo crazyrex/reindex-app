@@ -4,6 +4,7 @@
 * List all the features
 */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import HeaderSite from 'components/HeaderSite';
@@ -295,14 +296,14 @@ class RecordPage extends React.Component {
 
 
 RecordPage.propTypes = {
-  updateRecord: React.PropTypes.func,
-  loadData: React.PropTypes.func,
-  data: React.PropTypes.object,
-  closeUpdateRecordModal: React.PropTypes.func,
-  updateRecordAlert: React.PropTypes.object,
-  router: React.PropTypes.object,
-  goToTnxPage: React.PropTypes.bool,
-  cleanSelectedRecordData: React.PropTypes.func,
+  updateRecord: PropTypes.func,
+  loadData: PropTypes.func,
+  data: PropTypes.object,
+  closeUpdateRecordModal: PropTypes.func,
+  updateRecordAlert: PropTypes.object,
+  router: PropTypes.object,
+  goToTnxPage: PropTypes.bool,
+  cleanSelectedRecordData: PropTypes.func,
 };
 
 function mapStateToProps(state) {

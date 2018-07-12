@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
 import {
@@ -18,10 +19,10 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 );
 
 renderField.propTypes = {
-  input: React.PropTypes.object,
-  label: React.PropTypes.string,
-  meta: React.PropTypes.object,
-  type: React.PropTypes.string,
+  input: PropTypes.object,
+  label: PropTypes.string,
+  meta: PropTypes.object,
+  type: PropTypes.string,
 };
 
 const LoginForm = (props) => (
@@ -33,7 +34,7 @@ const LoginForm = (props) => (
 );
 
 LoginForm.propTypes = {
-  handleSubmit: React.PropTypes.func,
+  handleSubmit: PropTypes.func,
 };
 
 export default reduxForm({
