@@ -14,7 +14,7 @@ import Table, {
   import Checkbox from 'material-ui@next/Checkbox';
   import './ResultsTable.scss';
 
-class ResultsTable extends React.Component {
+class ResultsTable extends React.PureComponent {
   constructor(props) {
   super(props);
   this.state = { isAsc: false, sortHeader: null ,page:1, currentPage:1 ,changedOrder:false, selected: [],unSelected:[]};

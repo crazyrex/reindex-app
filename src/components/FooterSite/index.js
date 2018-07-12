@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './FooterSite.scss';
 
-class FooterSite extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class FooterSite extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (

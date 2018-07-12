@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Checkbox, RadioButton, RadioButtonGroup } from 'material-ui';
 
 import './AdminSettings.scss';
-class AdminSettings extends React.Component {
+class AdminSettings extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {

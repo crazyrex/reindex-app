@@ -14,7 +14,7 @@ import CloseIcon from 'material-ui/svg-icons/navigation/close';
 
 import './Phone.scss';
 
-class PhoneView extends React.Component {
+class PhoneView extends React.PureComponent {
   constructor(props) {
     super(props);
 

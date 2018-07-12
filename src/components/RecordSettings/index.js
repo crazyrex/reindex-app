@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 import { updateScore, closeRecordSettingsAlert ,deleteRecord} from './actions';
 import './RecordSettings.scss';
 
-class RecordSettings extends React.Component {
+class RecordSettings extends React.PureComponent {
 
   constructor(props) {
     super(props);

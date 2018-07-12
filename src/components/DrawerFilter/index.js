@@ -13,7 +13,7 @@ if (config.lang == "he")
   translate = require('globalTranslateHE.json');
 else
   translate = require('globalTranslate.json');
-class DrawerFilter extends React.Component {
+class DrawerFilter extends React.PureComponent {
 
   constructor(props) {
     super(props);

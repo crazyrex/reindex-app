@@ -4,7 +4,7 @@ import Chip from 'material-ui/Chip';
 
 import './Tags.scss';
 
-class Tags extends React.Component {
+class Tags extends React.PureComponent {
 
   onTouchTap(category) {
     if (!category.disabled) {

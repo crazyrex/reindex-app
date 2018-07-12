@@ -9,7 +9,7 @@ import { NO_RESULTS_TEXT, NO_RESULTS_TEXT_FROM_CAMPAIGN } from './constants';
 const styles = require('./NoResults.scss');
 
 
-class NoResults extends React.Component {
+class NoResults extends React.PureComponent {
 
   constructor(props) {
     super(props);

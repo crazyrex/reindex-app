@@ -14,7 +14,7 @@ import {
     TableRowColumn,
   } from 'material-ui/Table';
 
-class AdminUsers extends React.Component {
+class AdminUsers extends React.PureComponent {
     constructor(props) {
         super(props);
         // this.state = {

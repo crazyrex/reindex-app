@@ -16,7 +16,7 @@ import { initSearch } from 'components/SearchBar/actions';
 
 const styles = require('./HeaderSite.scss');
 
-class HeaderSite extends React.Component {
+class HeaderSite extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = { open: false };

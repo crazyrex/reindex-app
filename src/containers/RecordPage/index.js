@@ -65,7 +65,7 @@ function splitTags(tagsStr, catArr, isDetectmob) {
   </div>);
 }
 
-class RecordPage extends React.Component {
+class RecordPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

@@ -17,7 +17,7 @@ import { detectmob, updateSearchLocation, str2spc, getLocationData } from 'utils
 
 import './LocationChange.scss';
 
-class LocationChange extends React.Component {
+class LocationChange extends React.PureComponent {
 
   constructor(props) {
     super(props);

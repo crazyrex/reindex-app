@@ -50,7 +50,7 @@ renderField.propTypes = {
   meta: PropTypes.object,
 };
 
-let DetailsForm = class DetailsForm extends React.Component {
+let DetailsForm = class DetailsForm extends React.PureComponent {
 
   constructor(props) {
     super(props);

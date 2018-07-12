@@ -41,7 +41,7 @@ renderField.propTypes = {
   meta: PropTypes.object,
 };
 
-let CreateForm = class CreateForm extends React.Component {
+let CreateForm = class CreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

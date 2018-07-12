@@ -4,7 +4,7 @@ import { Checkbox, RadioButton, RadioButtonGroup } from 'material-ui';
 import { browserHistory } from 'react-router';
 
 import './AdminSettings.scss';
-class AdminSettings extends React.Component {
+class AdminSettings extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {

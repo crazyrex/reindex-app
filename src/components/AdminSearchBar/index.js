@@ -16,7 +16,7 @@ const translate = {
   people: 'אנשים',
 };
 
-class SearchBar extends React.Component {
+class SearchBar extends React.PureComponent {
   constructor(props) {
     super(props);
 
