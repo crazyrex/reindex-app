@@ -23,7 +23,6 @@ import Drawer from 'material-ui/Drawer';
 import translate from 'globalTranslate.json';
 import { updateRecord, closeUpdateRecordModal } from './actions';
 import MapBox from 'components/Mapbox';
-import GovMap from 'components/MapGov';
 export class ResultsPage extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -97,7 +96,7 @@ export class ResultsPage extends React.PureComponent {
   }
   //   componentDidMount() {
 
-  //   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+  //   var mapboxgl = require('mapbox-gl');
   //     mapboxgl.accessToken = 'pk.eyJ1IjoieWVodWRpdGciLCJhIjoiY2pkc3Eza2k1MHBneDMzcDcxbm9wY3h5cSJ9.QqvDmAmAvsRZdx3VUzb-eg';
   //     var map = new mapboxgl.Map({
   //       container: 'mapboxres',
@@ -238,10 +237,8 @@ export class ResultsPage extends React.PureComponent {
                 />
               </div> : ''}
             </Tab>
-            <Tab label="Map View" onActive={(tab) => { this.setState({ index: tab.props.index }) }} style={this.getStyle(this.state.index === 1)}>
-              {/*false ?
-                <MapBox data={this.props.results} /> : ''}
-              {/* <GovMap data={this.props.results}/> */}
+            <Tab label="Map View" onActive={(tab) => { this.setState({ index: tab.props.index }); }} style={this.getStyle(this.state.index === 1)}>
+              {this.props.results.length && <MapBox data={this.props.results} />}
             </Tab>
           </Tabs>
         </div>
