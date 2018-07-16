@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { detectmob, getPhone } from 'utils/functions';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Popover from 'material-ui/Popover';
 import Dialog from 'material-ui/Dialog';
 import IconButton from 'material-ui/IconButton';
-import PhoneIcon from 'material-ui/svg-icons/communication/call';
-import CloseIcon from 'material-ui/svg-icons/navigation/close';
+import PhoneIcon from '@material-ui/icons/Call';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 
@@ -145,7 +145,7 @@ class Phone extends React.PureComponent {
         <PhoneView detectmob={this.state.detectmob} footer={this.props.footer} cardName={this.props.data.business_name} isVirtual={false} data={getPhone([this.props.data.phone, this.props.data.phone_2], this.props.data.virtual_number)} />
         <div>
           {/* {getPhone(this.props.data.phone_2 || this.props.data.phone) ?
-            <div><FlatButton className="show-phone-btn" disabled={this.state.disabled} labelStyle={{ paddingRight: 20, paddingLeft: 20, fontSize: 16 }} label="הצג מספר טלפון" /></div> : ''} */}
+            <div><Button className="show-phone-btn" disabled={this.state.disabled} labelStyle={{ paddingRight: 20, paddingLeft: 20, fontSize: 16 }} label="הצג מספר טלפון" /></div> : ''} */}
         </div>
         <Popover
           open={this.state.open}

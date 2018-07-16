@@ -46,7 +46,7 @@ class Html extends Component {
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
           <script dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(store.getState())};` }} charSet="UTF-8" />
           <script src={assets.javascript.main} charSet="UTF-8" />          
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMbSKyjyjhm6x_6UQvHP1rJ-LGDF7Ac6o" async defer></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJUEws4YzhCLtv21JXS_b7Bs9xN6KcDJQ" async defer></script>
         </body>
       </html>
     );

@@ -15,12 +15,10 @@ import LocationChange from 'components/LocationChange';
 import { detectmob, updateSearchLocation, str2spc, getLocationData } from 'utils/functions';
 import { browserHistory } from 'react-router';
 import { loadResults } from './sagas';
-import { loadResults as loadResultsAction } from './actions';
 import { loadSubcategories } from 'components/SearchBar/saga';
 import { updateSearchObj } from 'components/SearchBar/actions';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Slider from 'material-ui/Slider';
-import Drawer from 'material-ui/Drawer';
 import translate from 'globalTranslate.json';
 import { updateRecord, closeUpdateRecordModal } from './actions';
 import MapBox from 'components/Mapbox';
@@ -95,16 +93,6 @@ export class ResultsPage extends React.PureComponent {
     this.updateSearchObject(locationData);
 
   }
-  //   componentDidMount() {
-
-  //   var mapboxgl = require('mapbox-gl');
-  //     mapboxgl.accessToken = 'pk.eyJ1IjoieWVodWRpdGciLCJhIjoiY2pkc3Eza2k1MHBneDMzcDcxbm9wY3h5cSJ9.QqvDmAmAvsRZdx3VUzb-eg';
-  //     var map = new mapboxgl.Map({
-  //       container: 'mapboxres',
-  //       style: 'mapbox://styles/mapbox/streets-v10',
-  //       zoom: 15,
-  //  });
-  // }
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.location.query.lat) {
@@ -124,7 +112,6 @@ export class ResultsPage extends React.PureComponent {
   }
 
   getStyle(isActive) {
-    console.log('getStyle isActive ', isActive);
     return isActive ? this.state.tabStyle.active_tab : this.state.tabStyle.default_tab;
   }
   openChangeLocation() {
@@ -171,7 +158,6 @@ export class ResultsPage extends React.PureComponent {
       this.props.handleGetNearMe();
     }).catch((error) => {
       console.log('err', error)
-      // alert('geo location error');
       // this.setState({
       //   showSideBarNearMe: false,
       //   changeLocation: false
@@ -220,7 +206,7 @@ export class ResultsPage extends React.PureComponent {
                 <div className="results-count"> {this.props.totalResults} {translate.resultsFound} </div>
                 {(this.state.detectmob && !this.state.changeLocation && this.props.location.pathname.indexOf(config.searchTabs.businesses.route) > -1) && this.state.index == 0 ?
                   <div onClick={this.showSideBarNearMe} className='wrapper-nearme' >
-                    <FlatButton label={translate.businessesNearby} labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18, textTransform: 'lowercase' }} />
+                    <Button label={translate.businessesNearby} labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18, textTransform: 'lowercase' }} />
                   </div> : ''}
                 {this.state.detectmob && this.state.changeLocation ?
                   <div onClick={this.openChangeLocation} className='change-loc' >
@@ -239,7 +225,7 @@ export class ResultsPage extends React.PureComponent {
               </div> : ''}
             </Tab>
             <Tab label="Map View" onActive={(tab) => { this.setState({ index: tab.props.index }); }} style={this.getStyle(this.state.index === 1)}>
-              {this.props.results.length && <MapBox data={this.props.results} />}
+              {this.props.results.length && this.state.index === 1 && <MapBox data={this.props.results} />}
             </Tab>
           </Tabs>
         </div>

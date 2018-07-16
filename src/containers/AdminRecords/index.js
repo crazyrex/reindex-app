@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import UploadFile from 'rc-upload';
 import Snackbar from 'material-ui/Snackbar';
 import config from 'ReindexConfig';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 
 import './AdminRecords.scss';
 
@@ -68,7 +68,7 @@ export class AdminRecords extends React.PureComponent {
         ))}
           <UploadFile {...this.state.uploaderProps} disabled={!this.state.uploaderProps.action}>
             <a>
-              <FlatButton label={'Upload Records CSV File'} disabled={!this.state.uploaderProps.action} />
+              <Button label={'Upload Records CSV File'} disabled={!this.state.uploaderProps.action} />
             </a>
           </UploadFile>
         </div>

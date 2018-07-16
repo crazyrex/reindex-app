@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'; // v1.x
+import { MuiThemeProvider as V0MuiThemeProvider} from 'material-ui';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { getLocationData } from 'utils/functions';
-import { detectmob } from '../../utils/functions';
+import { detectmob } from 'utils/functions';
 import config from 'ReindexConfig';
 
 let isRtl;
 config.lang == "he" ? isRtl = true : false;
-const muiTheme = getMuiTheme({ isRtl: isRtl, fontFamily: 'Heebo' });
+
+const theme = createMuiTheme({ isRtl: isRtl, fontFamily: 'Heebo' });
+const themeV0 = getMuiTheme({ isRtl: isRtl, fontFamily: 'Heebo' });
 
 import {
   navigate,
@@ -71,12 +74,14 @@ class App extends Component {
   render() {
     const { children, inputValue, location } = this.props;
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
+      <MuiThemeProvider theme={theme}>
+        <V0MuiThemeProvider muiTheme={themeV0}>
         <div className={`app ${(location.pathname.split('/')[1]) ? location.pathname.split('/')[1] : 'home'}`}>
           <div className="content">
             {children}
           </div>
         </div>
+        </V0MuiThemeProvider>
       </MuiThemeProvider>
     );
   }

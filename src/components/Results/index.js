@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Chip from 'material-ui/Chip';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import { detectmob } from 'utils/functions';
 import { ReCAPTCHA } from 'react-google-recaptcha';
 import { requestNoParse } from 'utils/request';
-import HomeIcon from 'material-ui/svg-icons/action/home';
-import UpdateIcon from 'material-ui/svg-icons/action/update';
-import BusinessIcon from 'material-ui/svg-icons/places/business-center';
-import PlaceIcon from 'material-ui/svg-icons/maps/place';
+import HomeIcon from '@material-ui/icons/Home';
+import UpdateIcon from '@material-ui/icons/Update';
+import BusinessIcon from '@material-ui/icons/BusinessCenter';
+import PlaceIcon from '@material-ui/icons/Place';
 import GMap from 'components/GMap';
 import config from 'ReindexConfig';
 
@@ -272,9 +272,14 @@ class Results extends React.PureComponent {
                     </span>
                   </div>*/}
                 </div>
-                <div className="wrapper-map">
-                  <GMap location={res._source} />
-                </div>
+                {res._source.reindexLocationPoints && res._source.reindexLocationPoints.length &&
+                  <div className="wrapper-map">
+                    <GMap
+                      loadingElement={<div style={{ height: `100%` }} />}
+                      containerElement={<div style={{ height: `400px` }} />}
+                      mapElement={<div style={{ height: `100%` }} />}
+                      points={res._source.reindexLocationPoints}/>
+                  </div>}
                 <div className="wrapper-actions">
                   <div style={{ margin: '10px 0' }}>
                     <Link to={res._source.link}> {translate.goToBusinessPage}</Link>
@@ -296,7 +301,7 @@ class Results extends React.PureComponent {
             onClick={() => {
               this.setState({ showCaptcha: true }); this.scroll2Bottom();
             }}
-          ><FlatButton
+          ><Button
               labelStyle={{ paddingRight: 44, paddingLeft: 44, fontSize: 18 }}
               label="הצג תוצאות נוספות"
             /></div>

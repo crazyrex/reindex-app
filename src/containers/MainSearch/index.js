@@ -20,7 +20,7 @@ import { loadResults, changeState, updateRecord, displayIcons, closeUpdateRecord
 // import { spacing } from 'material-ui/styles';
 // const seoImage = require('assets/img/hp.png');
 // import IconButton from 'material-ui/IconButton';
-// import PlaceIcon from 'material-ui/svg-icons/navigation/cancel';
+// import PlaceIcon from '@material-ui/icons/navigation/cancel';
 let styles;
 if (config.lang == "he")
   styles = require('./MainSearch.rtl.scss');

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import SearchIcon from 'material-ui/svg-icons/action/search';
+import SearchIcon from '@material-ui/icons/Search';
 import AutoComplete from 'material-ui/AutoComplete';
 import { updateSearchLocation } from 'utils/functions';
 import config from 'ReindexConfig';
 import arrow from 'assets/img/icon-arrow-down.svg';
 import './SearchBar.scss';
 import { loadFilterData, loadSubCategories, setActiveTab, loadCategoriesFilterData, updateSearchObj, emptySubCategories, loadHierarchyFilterData } from './actions';
-import search from 'material-ui/svg-icons/action/search';
+import search from '@material-ui/icons/Search';
 const hierarchyFilters = config.hierarchyFilters;
 
 let translate;

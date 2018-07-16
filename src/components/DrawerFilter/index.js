@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
-import CloseIcon from 'material-ui/svg-icons/navigation/close';
-import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
+import CloseIcon from '@material-ui/icons/Close';
+import FilterListIcon from '@material-ui/icons/FilterList';
 import Filters from 'components/Filters';
 import config from 'ReindexConfig';
 

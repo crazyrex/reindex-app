@@ -2,15 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import { connect } from 'react-redux';
-import IconButton from 'material-ui/IconButton';
-import CloseIcon from 'material-ui/svg-icons/navigation/close';
-import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
-import Filters from 'components/Filters';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import AutoComplete from 'material-ui/AutoComplete';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
-import { detectmob, updateSearchLocation, str2spc, getLocationData } from 'utils/functions';
+import Button from '@material-ui/core/Button';
+import { updateSearchLocation } from 'utils/functions';
 
 
 
@@ -68,7 +63,7 @@ class LocationChange extends React.PureComponent {
   render() {
     return (
       <div className="loc">
-        {/* <FlatButton label='שנה מיקום' onClick={this.open} labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18 }} /> */}
+        {/* <Button label='שנה מיקום' onClick={this.open} labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18 }} /> */}
         <div className="location-change">
           <Drawer
             docked={false}

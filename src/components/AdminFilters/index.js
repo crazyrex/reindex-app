@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import AutoComplete from 'material-ui/AutoComplete';
-import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton'
-import BackIcon from 'material-ui/svg-icons/navigation/arrow-back';
+import BackIcon from '@material-ui/icons/ArrowBack';
 import Divider from 'material-ui/Divider';
 import IconsStyle from '../../utils/iconsStyle';
 import config from 'ReindexConfig';

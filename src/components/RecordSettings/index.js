@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import 'react-select/dist/react-select.css';
 import Select from 'react-select';
 
@@ -49,12 +49,12 @@ class RecordSettings extends React.PureComponent {
  
   render() {
     const actions = [
-      <FlatButton
+      <Button
         label="ביטול"
         primary
         onTouchTap={this.handleClose}
       />,
-      <FlatButton
+      <Button
         label="אישור"
         primary
         keyboardFocused

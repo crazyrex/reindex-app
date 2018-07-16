@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UploadFile from 'rc-upload';
 import config from 'ReindexConfig';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 
 
 class Upload extends Component {
@@ -72,7 +72,7 @@ class Upload extends Component {
         <input type="text" value={this.state.input2} placeholder="city" name="input3" onChange={this.change3} />
         <UploadFile {...this.state.uploaderProps} >
           <a>
-            <FlatButton label={'Upload CSV File'} />
+            <Button label={'Upload CSV File'} />
           </a>
         </UploadFile>
       </div>

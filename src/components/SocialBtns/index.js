@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ShareButtons, generateShareIcon } from 'react-share';
 import IconButton from 'material-ui/IconButton';
-import PhoneIcon from 'material-ui/svg-icons/communication/call';
-import MailIcon from 'material-ui/svg-icons/content/mail';
+import PhoneIcon from '@material-ui/icons/Call';
+import MailIcon from '@material-ui/icons/Mail';
 import './SocialBtns.scss';
 //import { generateIcon } from 'react-share/lib/generateIcon';
 

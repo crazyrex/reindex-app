@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import IconButton from 'material-ui/IconButton';
 import TextField from 'material-ui/TextField';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import { change } from 'redux-form';
-import DelIcon from 'material-ui/svg-icons/action/delete';
-import AddIcon from 'material-ui/svg-icons/content/add';
-import CloseIcon from 'material-ui/svg-icons/navigation/close';
+import DelIcon from '@material-ui/icons/Delete';
+import AddIcon from '@material-ui/icons/Add';
+import CloseIcon from '@material-ui/icons/Close';
 
 import './CategoriesTree.scss';
 
@@ -221,12 +221,12 @@ class CategoriesTree extends React.PureComponent {
             />)
       }
     const actions = [
-      <FlatButton
+      <Button
         label="Cancel"
         primary={true}
         onTouchTap={() => this.handleDialogClose('cancel')}
       />,
-      <FlatButton
+      <Button
         label="OK"
         primary={true}
         keyboardFocused={true}

@@ -10,7 +10,7 @@
   },
   "rules": {
     "react/no-multi-comp": 0,
-    "react/prefer-stateless-function": 0,
+    "react/prefer-stateless-function": [ "error", { "ignorePureComponents": true }],
     "import/default": 0,
     "import/no-duplicates": 0,
     "import/named": 0,

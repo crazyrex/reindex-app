@@ -2,7 +2,8 @@ import has from 'lodash/has';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import { Router, RouterContext } from 'react-router';
+import { Router, RouterContext, applyRouterMiddleware } from 'react-router';
+import { useScroll } from 'react-router-scroll';
 import GoogleAnalytics from 'react-ga';
 
 require('../../assets/css/global-styles.scss');
@@ -61,7 +62,7 @@ export default class Root extends Component {
         <div>
           {type === 'server'
             ? <RouterContext {...renderProps} />
-            : <Router history={history} routes={routes} onUpdate={this.onUpdate} />}
+            : <Router history={history} routes={routes} onUpdate={this.onUpdate} render={applyRouterMiddleware(useScroll())} />}
         </div>
       </Provider>
     );

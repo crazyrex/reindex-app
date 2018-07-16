@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import logo from 'assets/img/logo.png';
 //import ResultsTable from 'components/ResultsTable';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Dialog from 'material-ui/Dialog';
 import CategoriesTree from 'components/CategoriesTree';
 import Snackbar from 'material-ui/Snackbar';
@@ -187,12 +187,12 @@ export class AdminSearch extends React.PureComponent {
 
   render() {
     const actions = [
-      <FlatButton
+      <Button
         label="Cancel"
         primary
         onTouchTap={() => this.handleModalClose('cancel')}
       />,
-      <FlatButton
+      <Button
         label="Submit"
         primary
         keyboardFocused

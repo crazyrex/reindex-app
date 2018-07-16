@@ -4,7 +4,7 @@ import { Checkbox, RadioButton, RadioButtonGroup } from 'material-ui';
 import { browserHistory } from 'react-router';
 import { loadUsers, updateUser } from './actions';
 import { connect } from 'react-redux';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import {
     Table,
     TableBody,
@@ -59,7 +59,7 @@ class AdminUsers extends React.PureComponent {
                       <TableRowColumn>{user.role}</TableRowColumn>
                       {user.role !== 'Admin' ?
                         <TableRowColumn>    
-                            <FlatButton label="set to admin" fullWidth={true} onClick={() => this.updateUser(user._id)}/>
+                            <Button label="set to admin" fullWidth={true} onClick={() => this.updateUser(user._id)}/>
                         </TableRowColumn>
                     :''}
                     </TableRow>

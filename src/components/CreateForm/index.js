@@ -5,7 +5,7 @@ import { Field, reduxForm, formValueSelector } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Dialog from 'material-ui/Dialog';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -17,7 +17,7 @@ import config from '../../config';
 import { createRecord, closeCreateRecordModal, register2MailingList } from './actions';
 import { detectmob } from 'utils/functions';
 import IconButton from 'material-ui/IconButton';
-import CloseIcon from 'material-ui/svg-icons/action/home';
+import CloseIcon from '@material-ui/icons/Home';
 
 const styles = require('./CreateForm.scss');
 const hstyles = require('../HeaderSite/HeaderSite.scss');
@@ -169,7 +169,7 @@ let CreateForm = class CreateForm extends React.PureComponent {
       <div>
         <div className={hstyles['wrapper-createBtn']} onClick={() => { this.clickCreateRecord(); this.setState({ modalOpen: !this.state.modalOpen }); }}>
           {!this.state.detectmob ?
-            <FlatButton label={openPopuplabel} labelStyle={labelStyle} /> :
+            <Button label={openPopuplabel} labelStyle={labelStyle} /> :
             <div className="create-btn">
               <IconButton><CloseIcon /></IconButton>
               <span>הוסף</span>
@@ -228,7 +228,7 @@ let CreateForm = class CreateForm extends React.PureComponent {
             {(this.state.type && config.searchTabs.type.indexOf(this.state.type.toString()) > -1) ?
               <CategoriesTree onUpdate={this.updateSelectedCategories} /> : ''}
             <div className="wrapper-actions">
-              <div onClick={this.handleModalClose}><FlatButton label="ביטול" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
+              <div onClick={this.handleModalClose}><Button label="ביטול" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
               <RaisedButton className="submitBtn" type="submit" label={updateBtnLabel} labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} />
             </div>
           </form>

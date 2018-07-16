@@ -12,7 +12,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link, browserHistory } from 'react-router'
 import { push } from 'react-router-redux';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 
 import './Admin.scss';
 
@@ -56,8 +56,8 @@ class Admin extends React.PureComponent {
           <Link to="/admin/edit"><MenuItem className="admin-menu">Edit</MenuItem></Link>
         </Drawer>
         {this.state.open ?
-          <FlatButton className="show-menu" onClick={() => this.setState({ open: false })}>Show menu</FlatButton>
-          : <FlatButton className="hide-menu" onClick={() => this.setState({ open: true })}>Hide menu</FlatButton>
+          <Button className="show-menu" onClick={() => this.setState({ open: false })}>Show menu</Button>
+          : <Button className="hide-menu" onClick={() => this.setState({ open: true })}>Hide menu</Button>
         }
         <div className={`children ${!this.state.open ? `close` : ""}`}>{this.props.children}</div>
       </div>

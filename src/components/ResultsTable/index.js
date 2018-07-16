@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import Chip from 'material-ui/Chip';
 import RecordSettings from 'components/RecordSettings';
-import SortIcon from 'material-ui/svg-icons/action/swap-vert';
+import SortIcon from '@material-ui/icons/action/swap-vert';
 import InlineEdit from 'react-edit-inline';
 import Table, {
   TableBody,

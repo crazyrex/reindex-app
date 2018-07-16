@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Autocomplete from 'components/Autocomplete';
-import SearchIcon from 'material-ui/svg-icons/action/search';
+import SearchIcon from '@material-ui/icons/Search';
 
 import arrow from 'assets/img/icon-arrow-down.svg';
 

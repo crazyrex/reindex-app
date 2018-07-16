@@ -4,7 +4,7 @@ import { Field, reduxForm, change } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import MenuItem from 'material-ui/MenuItem';
 import Dialog from 'material-ui/Dialog';
 import { Checkbox } from 'redux-form-material-ui';
@@ -186,7 +186,7 @@ let DetailsForm = class DetailsForm extends React.PureComponent {
           {config.searchTabs[this.state.type] === 'businesses' ?
             <CategoriesTree onUpdate={this.updateSelectedCategories} initialValues={this.props.initialValues.categories} /> : ''}
           <div className="wrapper-actions">
-            <div onClick={this.props.handleClose}><FlatButton label="Cancel changes" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
+            <div onClick={this.props.handleClose}><Button label="Cancel changes" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
             {config.searchTabs[this.state.type] === 'businesses' ?
               <RaisedButton className="submitBtn" type="submit" label="עדכן פרטי עסק" labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} /> : <RaisedButton className="submitBtn" type="submit" label="עדכן פרטים " labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} />
             }

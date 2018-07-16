@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { uploadImage } from './actions';
 import UploadFile from 'rc-upload';
 import config from 'ReindexConfig';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -57,7 +57,7 @@ class UploadImage extends Component {
       <div>
         <UploadFile {...this.state.uploaderProps} >
           <a>
-            <FlatButton label='Upload Image' />
+            <Button label='Upload Image' />
           </a>
         </UploadFile>
       </div>

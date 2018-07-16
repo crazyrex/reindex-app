@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavigationExpandMore from 'material-ui/svg-icons/navigation/expand-more';
-import NavigationExpandLess from 'material-ui/svg-icons/navigation/expand-less';
+import NavigationExpandMore from '@material-ui/icons/navigation/expand-more';
+import NavigationExpandLess from '@material-ui/icons/navigation/expand-less';
 import abroch from 'assets/img/no-results.png';
 import { detectmob } from 'utils/functions';
 import { NO_RESULTS_TEXT, NO_RESULTS_TEXT_FROM_CAMPAIGN } from './constants';
