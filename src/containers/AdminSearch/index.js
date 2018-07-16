@@ -9,9 +9,7 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 //import AdminSearchBar from 'components/AdminSearchBar';
 //import AdminFilters from 'components/AdminFilters';
-import logo from 'assets/img/logo.png';
 //import ResultsTable from 'components/ResultsTable';
-import RaisedButton from 'material-ui/RaisedButton';
 import Button from '@material-ui/core/Button';
 import Dialog from 'material-ui/Dialog';
 import CategoriesTree from 'components/CategoriesTree';
@@ -188,23 +186,21 @@ export class AdminSearch extends React.PureComponent {
   render() {
     const actions = [
       <Button
-        label="Cancel"
         primary
         onTouchTap={() => this.handleModalClose('cancel')}
-      />,
+      >Cancel</Button>,
       <Button
-        label="Submit"
         primary
         keyboardFocused
         onTouchTap={() => this.handleModalClose('submit')}
-      />,
+      >Submit</Button>,
     ];
 
     const resultsActions =
       <div className="wrapper-selected-results-actions">
-        <div onClick={() => this.openModal('add category')}><RaisedButton label="קשר לקטגוריה" style={{ width: '200px' }} /></div>
-        <div onClick={() => this.openModal('remove category')}><RaisedButton label="הסר קטגוריה" style={{ width: '200px' }} /></div>
-        <div onClick={() => this.showLast('score')}><RaisedButton label="הצג בסוף הרשימה" style={{ width: '200px' }} /></div>
+        <div onClick={() => this.openModal('add category')}><Button variant="contained" style={{ width: '200px' }} >קשר לקטגוריה</Button></div>
+        <div onClick={() => this.openModal('remove category')}><Button variant="contained" style={{ width: '200px' }} >הסר קטגוריה</Button></div>
+        <div onClick={() => this.showLast('score')}><Button variant="contained" style={{ width: '200px' }} ></Button>הצג בסוף הרשימה</div>
 
       </div>;
 

@@ -59,7 +59,7 @@ class AdminUsers extends React.PureComponent {
                       <TableRowColumn>{user.role}</TableRowColumn>
                       {user.role !== 'Admin' ?
                         <TableRowColumn>    
-                            <Button label="set to admin" fullWidth={true} onClick={() => this.updateUser(user._id)}/>
+                            <Button fullWidth={true} onClick={() => this.updateUser(user._id)}>set to admin</Button>
                         </TableRowColumn>
                     :''}
                     </TableRow>

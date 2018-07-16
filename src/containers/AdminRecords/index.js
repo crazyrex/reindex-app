@@ -68,7 +68,7 @@ export class AdminRecords extends React.PureComponent {
         ))}
           <UploadFile {...this.state.uploaderProps} disabled={!this.state.uploaderProps.action}>
             <a>
-              <Button label={'Upload Records CSV File'} disabled={!this.state.uploaderProps.action} />
+              <Button disabled={!this.state.uploaderProps.action} >Upload Records CSV File</Button>
             </a>
           </UploadFile>
         </div>

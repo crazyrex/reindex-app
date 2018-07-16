@@ -5,7 +5,7 @@ import {createSetting} from './../../components/Settings/actions';
 import keycode from 'keycode';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import AutoComplete from 'material-ui/AutoComplete';
 import UploadImage from 'components/UploadImage';
 import { getSetting } from './../../components/Settings/actions';

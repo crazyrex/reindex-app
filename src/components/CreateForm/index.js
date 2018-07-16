@@ -4,7 +4,6 @@ import { browserHistory } from 'react-router';
 import { Field, reduxForm, formValueSelector } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
 import Button from '@material-ui/core/Button';
 import Dialog from 'material-ui/Dialog';
 import SelectField from 'material-ui/SelectField';
@@ -169,7 +168,7 @@ let CreateForm = class CreateForm extends React.PureComponent {
       <div>
         <div className={hstyles['wrapper-createBtn']} onClick={() => { this.clickCreateRecord(); this.setState({ modalOpen: !this.state.modalOpen }); }}>
           {!this.state.detectmob ?
-            <Button label={openPopuplabel} labelStyle={labelStyle} /> :
+            <Button label={openPopuplabel} labelStyle={labelStyle}>{openPopuplabel}</Button> :
             <div className="create-btn">
               <IconButton><CloseIcon /></IconButton>
               <span>הוסף</span>
@@ -228,8 +227,8 @@ let CreateForm = class CreateForm extends React.PureComponent {
             {(this.state.type && config.searchTabs.type.indexOf(this.state.type.toString()) > -1) ?
               <CategoriesTree onUpdate={this.updateSelectedCategories} /> : ''}
             <div className="wrapper-actions">
-              <div onClick={this.handleModalClose}><Button label="ביטול" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
-              <RaisedButton className="submitBtn" type="submit" label={updateBtnLabel} labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} />
+              <div onClick={this.handleModalClose}><Button label="ביטול" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} >Cancel</Button></div>
+              <Button variant="contained" className="submitBtn" type="submit" label={updateBtnLabel} labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} >{updateBtnLabel}</Button>
             </div>
           </form>
         </Dialog>

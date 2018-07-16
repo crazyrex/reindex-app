@@ -206,7 +206,7 @@ export class ResultsPage extends React.PureComponent {
                 <div className="results-count"> {this.props.totalResults} {translate.resultsFound} </div>
                 {(this.state.detectmob && !this.state.changeLocation && this.props.location.pathname.indexOf(config.searchTabs.businesses.route) > -1) && this.state.index == 0 ?
                   <div onClick={this.showSideBarNearMe} className='wrapper-nearme' >
-                    <Button label={translate.businessesNearby} labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18, textTransform: 'lowercase' }} />
+                    <Button labelStyle={{ paddingRight: 11, paddingLeft: 11, fontSize: 18, textTransform: 'lowercase' }} >{translate.businessesNearby}</Button>
                   </div> : ''}
                 {this.state.detectmob && this.state.changeLocation ?
                   <div onClick={this.openChangeLocation} className='change-loc' >

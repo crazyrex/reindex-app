@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form/immutable';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import {
   TextField,
 } from 'redux-form-material-ui';
@@ -31,7 +31,7 @@ const RegisterForm = (props) => (
     <Field name="firstName" type="text" component={renderField} label="fiest name" />
     <Field name="lastName" type="text" component={renderField} label="last name" />
     <Field name="password" type="password" component={renderField} label="password" />
-    <div><RaisedButton type="submit" label="register" /></div>
+    <div><Button variant="contained" type="submit" >register</Button></div>
   </form>
 );
 

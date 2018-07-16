@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import Button from '@material-ui/core/Button';
 import 'react-select/dist/react-select.css';
 import Select from 'react-select';
@@ -50,21 +50,19 @@ class RecordSettings extends React.PureComponent {
   render() {
     const actions = [
       <Button
-        label="ביטול"
         primary
         onTouchTap={this.handleClose}
-      />,
+      >ביטול</Button>,
       <Button
-        label="אישור"
         primary
         keyboardFocused
         onTouchTap={this.updateScore}
-      />,
+      >אישור</Button>,
     ];
     return (
       <div>
-        <RaisedButton label="ערוך" onTouchTap={this.handleOpen} />
-        <RaisedButton label="מחק" onTouchTap={() => this.props.deleteRecord(this.props.record._id)} />
+        <Button variant="contained" onTouchTap={this.handleOpen} >ערוך</Button>
+        <Button variant="contained" onTouchTap={() => this.props.deleteRecord(this.props.record._id)} >מחק</Button>
         <Dialog
           title="עריכה"
           modal={false}

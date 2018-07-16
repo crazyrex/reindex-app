@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import { connect } from 'react-redux';
 import AutoComplete from 'material-ui/AutoComplete';
-import RaisedButton from 'material-ui/RaisedButton';
 import Button from '@material-ui/core/Button';
 import { updateSearchLocation } from 'utils/functions';
 
@@ -104,7 +103,7 @@ class LocationChange extends React.PureComponent {
               </form>
 
             </div>
-            <RaisedButton className="submitBtn" type="submit" label={'עדכן'} labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} onClick={() => this.close()} />
+            <Button variant="contained" className="submitBtn" type="submit" labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} onClick={() => this.close()} >עדכן</Button>
 
           </Drawer>
         </div>

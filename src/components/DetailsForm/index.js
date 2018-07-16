@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm, change } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
-import RaisedButton from 'material-ui/RaisedButton';
 import Button from '@material-ui/core/Button';
 import MenuItem from 'material-ui/MenuItem';
 import Dialog from 'material-ui/Dialog';
@@ -188,7 +187,7 @@ let DetailsForm = class DetailsForm extends React.PureComponent {
           <div className="wrapper-actions">
             <div onClick={this.props.handleClose}><Button label="Cancel changes" labelStyle={{ color: '#b3b3b3', fontSize: 16 }} /></div>
             {config.searchTabs[this.state.type] === 'businesses' ?
-              <RaisedButton className="submitBtn" type="submit" label="עדכן פרטי עסק" labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} /> : <RaisedButton className="submitBtn" type="submit" label="עדכן פרטים " labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} />
+              <Button variant="contained" className="submitBtn" type="submit" label="עדכן פרטי עסק" labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} /> : <Button variant="contained" className="submitBtn" type="submit" label="עדכן פרטים " labelStyle={{ fontSize: 16 }} overlayStyle={{ backgroundColor: 'transparent' }} />
             }
           </div>
         </form>

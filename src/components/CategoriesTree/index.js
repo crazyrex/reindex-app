@@ -222,16 +222,14 @@ class CategoriesTree extends React.PureComponent {
       }
     const actions = [
       <Button
-        label="Cancel"
         primary={true}
         onTouchTap={() => this.handleDialogClose('cancel')}
-      />,
+      >Cancel</Button>,
       <Button
-        label="OK"
         primary={true}
         keyboardFocused={true}
         onTouchTap={() => this.handleDialogClose('submit')}
-      />,
+      >OK</Button>,
     ];
     return (
         <div className="categories-tree-component">

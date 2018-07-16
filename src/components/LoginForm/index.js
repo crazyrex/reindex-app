@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import {
   TextField,
 } from 'redux-form-material-ui';
@@ -29,7 +29,7 @@ const LoginForm = (props) => (
   <form onSubmit={props.handleSubmit}>
     <Field name="email" type="email" component={renderField} label="email" />
     <Field name="password" type="password" component={renderField} label="password" />
-    <div><RaisedButton type="submit" label="login" /></div>
+    <div><Button variant="contained" type="submit">login</Button></div>
   </form>
 );
 

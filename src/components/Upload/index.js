@@ -72,7 +72,7 @@ class Upload extends Component {
         <input type="text" value={this.state.input2} placeholder="city" name="input3" onChange={this.change3} />
         <UploadFile {...this.state.uploaderProps} >
           <a>
-            <Button label={'Upload CSV File'} />
+            <Button>Upload CSV File</Button>
           </a>
         </UploadFile>
       </div>

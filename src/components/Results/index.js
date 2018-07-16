@@ -303,8 +303,7 @@ class Results extends React.PureComponent {
             }}
           ><Button
               labelStyle={{ paddingRight: 44, paddingLeft: 44, fontSize: 18 }}
-              label="הצג תוצאות נוספות"
-            /></div>
+              >הצג תוצאות נוספות</Button></div>
           : ''}
         {this.state.showCaptcha ?
           <ReCAPTCHA

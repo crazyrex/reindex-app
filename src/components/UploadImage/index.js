@@ -57,7 +57,7 @@ class UploadImage extends Component {
       <div>
         <UploadFile {...this.state.uploaderProps} >
           <a>
-            <Button label='Upload Image' />
+            <Button >Upload Image</Button>
           </a>
         </UploadFile>
       </div>
